@@ -1,0 +1,3 @@
+Calling Detect Entities
+{'LOCATION': ['Hyderabad', 'Bangalore', 'Delhi'], 'KeyPhrases': ['Quality thought', 'good institute', 'Garden house', 'Food', 'less price'], 'Sentiment': ['POSITIVE', 'POSITIVE', 'NEUTRAL']}
+End of Detect Entities

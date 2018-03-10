@@ -1,0 +1,119 @@
+Calling Detect Language
+{
+    "Languages": [
+        {
+            "LanguageCode": "en",
+            "Score": 0.9874843955039978
+        }
+    ],
+    "ResponseMetadata": {
+        "HTTPHeaders": {
+            "connection": "keep-alive",
+            "content-length": "64",
+            "content-type": "application/x-amz-json-1.1",
+            "date": "Thu, 08 Mar 2018 16:02:53 GMT",
+            "x-amzn-requestid": "28eecb30-22ea-11e8-ad19-63ebbbebc655"
+        },
+        "HTTPStatusCode": 200,
+        "RequestId": "28eecb30-22ea-11e8-ad19-63ebbbebc655",
+        "RetryAttempts": 0
+    }
+}
+End of Detect Language
+Calling Detect Entities
+{
+    "Entities": [
+        {
+            "BeginOffset": 0,
+            "EndOffset": 5,
+            "Score": 0.9566436409950256,
+            "Text": "Today",
+            "Type": "DATE"
+        },
+        {
+            "BeginOffset": 17,
+            "EndOffset": 26,
+            "Score": 0.9972061514854431,
+            "Text": "Hyderabad",
+            "Type": "LOCATION"
+        }
+    ],
+    "ResponseMetadata": {
+        "HTTPHeaders": {
+            "connection": "keep-alive",
+            "content-length": "200",
+            "content-type": "application/x-amz-json-1.1",
+            "date": "Thu, 08 Mar 2018 16:02:54 GMT",
+            "x-amzn-requestid": "293daec0-22ea-11e8-ba8e-57029772d3ee"
+        },
+        "HTTPStatusCode": 200,
+        "RequestId": "293daec0-22ea-11e8-ba8e-57029772d3ee",
+        "RetryAttempts": 0
+    }
+}
+End of Detect Entities
+Calling Detect Phrases
+{
+    "KeyPhrases": [
+        {
+            "BeginOffset": 0,
+            "EndOffset": 13,
+            "Score": 0.8878556489944458,
+            "Text": "Today weather"
+        },
+        {
+            "BeginOffset": 17,
+            "EndOffset": 26,
+            "Score": 0.9942678809165955,
+            "Text": "Hyderabad"
+        },
+        {
+            "BeginOffset": 44,
+            "EndOffset": 53,
+            "Score": 0.9336250424385071,
+            "Text": "hyderabad"
+        },
+        {
+            "BeginOffset": 57,
+            "EndOffset": 69,
+            "Score": 0.9983943104743958,
+            "Text": "a good place"
+        }
+    ],
+    "ResponseMetadata": {
+        "HTTPHeaders": {
+            "connection": "keep-alive",
+            "content-length": "342",
+            "content-type": "application/x-amz-json-1.1",
+            "date": "Thu, 08 Mar 2018 16:02:55 GMT",
+            "x-amzn-requestid": "29917455-22ea-11e8-97e2-3967f776ac68"
+        },
+        "HTTPStatusCode": 200,
+        "RequestId": "29917455-22ea-11e8-97e2-3967f776ac68",
+        "RetryAttempts": 0
+    }
+}
+End of Detect Key Phrases
+Calling Detect Sentiment
+{
+    "ResponseMetadata": {
+        "HTTPHeaders": {
+            "connection": "keep-alive",
+            "content-length": "159",
+            "content-type": "application/x-amz-json-1.1",
+            "date": "Thu, 08 Mar 2018 16:02:55 GMT",
+            "x-amzn-requestid": "29e86e0a-22ea-11e8-bb31-e118196dfed7"
+        },
+        "HTTPStatusCode": 200,
+        "RequestId": "29e86e0a-22ea-11e8-bb31-e118196dfed7",
+        "RetryAttempts": 0
+    },
+    "Sentiment": "MIXED",
+    "SentimentScore": {
+        "Mixed": 0.5272477269172668,
+        "Negative": 0.01808910444378853,
+        "Neutral": 0.047158051282167435,
+        "Positive": 0.4075051546096802
+    }
+}
+End of Detect Sentiment

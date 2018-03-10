@@ -1,0 +1,30 @@
+
+Author: #mahendrabigdata@gmail.com
+
+Amazon Comprehend configuration on Windows:
+
+Step 1 : create .aws directory if not exist under user home 
+    C:\Users\kristhim\> mkdir .aws 
+    cd C:\Users\kristhim\.aws> 
+    notepad config
+    [default]
+    region = us-east-1
+
+Step 2: create Credentials and store the credentials:
+    ' Create user in AWS and copy the access_key and secret_access_key 
+      then create Credentials file under localhost user home directoy '
+
+    cd C:\Users\kristhim\.aws> 
+    notepad credentials
+    [default]
+    aws_access_key_id = AKIAI6LHSZI2FNDP6AJQ
+    aws_secret_access_key = 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
+
+Step 3: Install awscli and boto3 API's 
+
+    ' Install the awscli and boto3 API using pip for the latest python
+      to work on amazon comprehend '
+    pip install awscli
+    pip install boto3
+
+
