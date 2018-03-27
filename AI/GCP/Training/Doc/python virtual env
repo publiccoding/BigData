@@ -1,0 +1,13 @@
+SETUP 4 Steps:
+Install Python
+Install Pip
+Install VirtualEnv
+Install VirtualEnvWrapper-win
+
+mkdir <path> ; cd <path>
+mkvirtualenv project_name (onetime) --python="c:\python27\python.exe" env 
+setvirutalenvdir . 
+workon (list the availble VirtualEnv project_name)
+cdvirtualenv project_name
+rmvirtualenv project_name
+
