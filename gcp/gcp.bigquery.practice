@@ -1,0 +1,83 @@
+
+C:\Users\kristhim>bq query "select id,title,url from bigquery-public-data.hacker_news.full group by title;
+C:\Users\kristhim>bq ls
+C:\Users\kristhim>bq query "select id,title,url from bigquery-public-data.hacker_news.full group by title";
+C:\Users\kristhim>BigQuery error in query operation: Not found: Project gcptest
+C:\Users\kristhim>gcloud init
+C:\Users\kristhim>bq l
+bq help' to get help
+C:\Users\kristhim>gcloud config set compute/zone us-east1-b
+C:\Users\kristhim>gcloud config set compute/region us-east1
+C:\Users\kristhim>bq ls publicdata:
+  datasetId
+C:\Users\kristhim>bq mk babynames
+Dataset 'gcptest-2:babynames' successfully created
+C:\Users\kristhim>bq load babynames.names2016 C:\Users\kristhim\Desktop\thimma\practice\names\yob2016.txt name:string, gender:string, count:integer
+C:\Users\kristhim>bq load babynames.names2010 C:\Users\kristhim\Desktop\thimma\practice\names\yob2010.txt name:string, gender:string, count:integer
+C:\Users\kristhim>bq load babynames.names2010 C:\\Users\\kristhim\\Desktop\\thimma\\practice\\names\\yob2010.txt name:string, gender:string, count:int
+C:\Users\kristhim>bq ls babynames:
+C:\Users\kristhim>bq ls gcptest-1:
+C:\Users\kristhim>bq load babynames.names2016 yob2016.txt name:string, gender:string, count:integer
+C:\Users\kristhim>bq load babynames.names2016 yob2016.txt [name:string, gender:string, count:integer]
+C:\Users\kristhim>bq load --autodetect babynames.names2016 yob2016.txt
+Upload complete
+Waiting on bqjob_r53f2284e_0000016294087986_1 ... (0s) Current status: DONE
+bqjob_r53f2284e_0000016294087986_1': Error while reading data, error
+C:\Users\kristhim>bq ls babynames.names2016
+TableReference
+C:\Users\kristhim>bq load --autodetect --source_format=csv babynames.names2016 yob2016.txt
+C:\Users\kristhim>bq load --autodetect --source_format=CSV babynames.names2016 yob2016.txt
+Waiting on bqjob_r250d320f_00000162940ba20d_1 ... (0s) Current status: DONE
+bqjob_r250d320f_00000162940ba20d_1': Error while reading data, error
+C:\Users\kristhim>bq load --source_format=csv babynames.names2016 yob2016.txt  name:string,gender:string,count:integer
+C:\Users\kristhim>bq load --source_format=CSV babynames.names2016 yob2016.txt  name:string,gender:string,count:integer
+Waiting on bqjob_r547bdf8d_00000162940d7ad6_1 ... (0s) Current status: DONE
+C:\Users\kristhim>bq ls babynames
+   tableId
+C:\Users\kristhim>bq show babynames.names2016
+Table gcptest-2:babynames.names2016
+C:\Users\kristhim>bq query "select name,gender from babynames.names2016 where gender='F' group by count ASC LIMIT 5"
+bqjob_r22d45c90_00000162941ae21e_1': Encountered " "ASC" "ASC "" at
+C:\Users\kristhim>bq query "select name,gender from babynames.names2016 where gender='F' order by count ASC LIMIT 5"
+Waiting on bqjob_r5a241d6f_00000162941b6667_1 ... (0s) Current status: DONE
+C:\Users\kristhim>
+C:\Users\kristhim>bq mk babynames2
+Dataset 'gcptest-2:babynames2' successfully created
+C:\Users\kristhim>bq load babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+bqjob_r5a384409_00000162957417f5_1': No schema specified on job or
+C:\Users\kristhim>bq load --autodetect  babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+Waiting on bqjob_r1765a816_000001629574e6c9_1 ... (0s) Current status: DONE
+bqjob_r1765a816_000001629574e6c9_1': Error while reading data, error
+C:\Users\kristhim>bq load --autodetect --source_format=CSV babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+Waiting on bqjob_r2af140cd_000001629575522e_1 ... (0s) Current status: DONE
+bqjob_r2af140cd_000001629575522e_1': Error while reading data, error
+C:\Users\kristhim>bq load babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt name:string,gender:string,count:integer
+Waiting on bqjob_r4f58cc2b_000001629575f4d0_1 ... (0s) Current status: DONE
+C:\Users\kristhim>bq show babynames2.names2000
+Table gcptest-2:babynames2.names2000
+bq mk babynames2
+bq load babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+bq load --autodetect  babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+bq load --autodetect --source_format=CSV babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+bq load babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt name:string,gender:string,count:integer
+bq show babynames2.names2000
+bq mk babynames3
+bq load babynames3.names2001 gs://gcptest-demo-bucket/names/yob2001.txt name:string,gender:string,count:integer
+bq cp babynames.names2016 babynames.names2016COPY
+bq update --description "Description for the baby Names on 2016" babynames.names2016
+bq cp -a babynames.names2016 testproject:babynames1.name2010
+bq cp -a babynames.names2016, babynames2.names2000 gcptest:babynames3.names2001
+bq cp -a babynames.names2016, babynames2.names2000 babynames3.names2001
+bq cp -f babynames.names2016, babynames2.names2000 babynames3.names2001
+bq show babynames3.names2001
+bq ls babynames3
+bq cp -f babynames.names2016 babynames3.names2001
+bq cp -f babynames.names2016, babynames2.names2000 babynames3.names20016
+bq cp -f babynames.names2016, babynames2.names2000 babynames3.names2016
+bq cp -f babynames.names2016 babynames3.names2016
+bq rm -t gcptest:babynames3.names2016
+bq ls
+bq rm -t gcptest-2:babynames3.names2016
+bq ls gcptest:babynames3
+bq head --max_rows=10 babynames3.names2001
+C:\Users\kristhim>bq head --max_rows=10 babynames3.names2001

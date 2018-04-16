@@ -1,0 +1,16 @@
+C:\Users\kristhim>gsutil
+C:\Users\kristhim>gsutil mb -c Coldline gs://gcptest-demo-bucket/
+C:\Users\kristhim>gsutil -m cp -r C:\Users\kristhim\Desktop\thimma\practice\names gs://gcptest-demo-bucket
+C:\Users\kristhim>gsutil ls gs://gcptest-demo-bucket
+C:\Users\kristhim>mv C:\Users\kristhim\Desktop\thimma\practice\names>yob2009.txt  C:\Users\kristhim\Desktop\thimma\practice\names>yob2009_testfile.txt
+C:\Users\kristhim>MOVE C:\Users\kristhim\Desktop\thimma\practice\names>yob2009.txt  C:\Users\kristhim\Desktop\thimma\practice\names>yob2009_testfile.t
+C:\Users\kristhim>gsutil ls gs://gcptest-demo-bucket/names/*
+C:\Users\kristhim>gsutil -m rsync -d -r C:\Users\kristhim\Desktop\thimma\practice\names gs://gcptest-bucket-demo/names
+C:\Users\kristhim>gsutil -m rsync -d -r C:\Users\kristhim\Desktop\thimma\practice\names gs://gcptest-demo-bucket/names
+C:\Users\kristhim>gsutil acl ch -r -u AllUsers:R gs://gcptest-demo-bucket/names
+C:\Users\kristhim>
+C:\Users\kristhim\Desktop\thimma\practice\names\yob2009_test_file.txt [Content-Type=text/plain]...
+http://storage.googleapis.com/gcptest-demo-bucket/names/NationalReadMe.pdf
+C:\Users\kristhim>gsutil ls -Lr gs://gcptest-demo-bucket
+C:\Users\kristhim>gsutil -m rm gs://gcptest-demo-bucket/**
+C:\Users\kristhim>gsutil rb gs://gcptest-demo-bucket

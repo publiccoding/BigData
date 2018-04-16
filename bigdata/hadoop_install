@@ -1,0 +1,116 @@
+
+Hadoop installation path:
+=========================
+
+https://www.guru99.com/how-to-install-hadoop.html
+
+#Add following lines to end of file ~/.bashrc
+
+#Set HADOOP_HOME
+export HADOOP_HOME=/home/hduser_/hadoop
+#Set JAVA_HOME
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+# Add bin/ directory of Hadoop to PATH
+export PATH=$PATH:$HADOOP_HOME/bin
+
+Set JAVA_HOME inside file $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+
+There are two parameters in $HADOOP_HOME/etc/hadoop/core-site.xml 
+
+<configuration>
+<property>
+<name>hadoop.tmp.dir</name>
+<value>/app/hadoop/tmp</value>
+<description>Parent directory for other temporary directories.</description>
+</property>
+<property>
+<name>fs.defaultFS </name>
+<value>hdfs://localhost:54310</value>
+<description>The name of the default file system. </description>
+</property>
+</configuration>
+
+
+sudo cp $HADOOP_HOME/etc/hadoop/mapred-site.xml.template $HADOOP_HOME/etc/hadoop/mapred-site.xml
+
+sudo gedit $HADOOP_HOME/etc/hadoop/mapred-site.xml  
+
+Add below lines of setting in between tags <configuration> and </configuration>
+
+<configuration>
+<property>
+<name>mapreduce.jobtracker.address</name>
+<value>localhost:54311</value>
+<final>true</final>
+<description>MapReduce job tracker runs at this host and port.
+</description>
+</property>
+</configuration>
+
+
+sudo gedit $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+
+<configuration>
+<property>
+<name>dfs.replication</name>
+<value>1</value>
+<description>Default block replication.</description>
+</property>
+<property>
+<name>dfs.datanode.data.dir</name>
+<value>/home/hduser_/hdfs</value>
+</property>
+</configuration>
+
+$HADOOP_HOME/bin/hdfs namenode -format
+
+sh $HADOOP_HOME/sbin/start-dfs.sh
+
+sh $HADOOP_HOME/sbin/start-yarn.sh
+
+sh $HADOOP_HOME/sbin/stop-dfs.sh
+sh $HADOOP_HOME/sbin/stop-yarn.sh
+
+Hive Installtion and configuration:
+===================================
+
+https://www.guru99.com/installation-configuration-hive-mysql.html
+
+Mention Hive Pathin ~/.bashrc
+export HIVE_HOME="/home/guru99hive/apache-hive-1.2.0-bin"
+export PATH=$PATH:$HIVE_HOME/bin
+export HADOOP_USER_NAME=hduser_ ( workaround)
+hive-site.xml :
+<configuration>
+	<property>
+		<name>javax.jdo.option.ConnectionURL</name>
+		<value>jdbc:mysql://localhost/metastore?createDatabaseIfNotExist=true</value>
+		<description>metadata is stored in a MySQL server</description>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionDriverName</name>
+		<value>com.mysql.jdbc.Driver</value>
+		<description>MySQL JDBC driver class</description>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionUserName</name>
+		<value>hiveuser</value>
+		<description>user name for connecting to mysql server</description>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionPassword</name>
+		<value>hivepassword</value>
+		<description>password for connecting to mysql server</description>
+	</property>
+    #(workaround)
+    <property>
+		<name>hive.metastore.warehouse.dir</name>
+		<value>/user/hive/warehouse</value>
+		<description>location of the warehouse directory</description>
+	</property>
+
+</configuration>
+    
+hive> set hive.metastore.warehouse.dir;
+
+

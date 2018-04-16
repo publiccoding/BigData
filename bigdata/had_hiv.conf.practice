@@ -1,0 +1,298 @@
+hduser_@vagrant-ubuntu-trusty-64:~$ ls
+hduser_@vagrant-ubuntu-trusty-64:~$ mv hadoop-2.9.0 hadoop
+hduser_@vagrant-ubuntu-trusty-64:~$ clear
+hduser_@vagrant-ubuntu-trusty-64:~$ ls
+hduser_@vagrant-ubuntu-trusty-64:~$ sudo chown -R hduser_ :hadoop_ hadoop
+hduser_@vagrant-ubuntu-trusty-64:~$ exit
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo addgroup hadoop_
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo delgroup hadoop_
+vagrant@vagrant-ubuntu-trusty-64:~$ su - hduser_
+hduser_@vagrant-ubuntu-trusty-64:~$ pwd
+hduser_@vagrant-ubuntu-trusty-64:~$ ssh-keygen -t rsa -p ""
+hduser_@vagrant-ubuntu-trusty-64:~$ ssh-keygen -t rsa -P ""
+hduser_@vagrant-ubuntu-trusty-64:~$ cat /home/hduser_/.ssh/id_rsa.pub >> /home/hduser_/.ssh/authorized_keys
+hduser_@vagrant-ubuntu-trusty-64:~$ ssh localhost
+hduser_@vagrant-ubuntu-trusty-64:~$ sudo chown -R hduser_:hadoop_ hadoop
+hduser_@vagrant-ubuntu-trusty-64:~$ cd hadoop/
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ pwd
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ vi ~/.bashrc
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ vi hadoop-2.9.0/
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ vi hadoop-2.9.0/etc/hadoop/hadoop-env.sh
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ . ~/.bashrc
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ vi hadoop-2.9.0/etc/hadoop/core-site.xml
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ cd $HADOOP_HOME/etc
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ echo $HADOOP_HOME
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ cd $HADOOP_HOME
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ cd hadoop-2.9.0/etc/hadoop/
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo mkdir -p /app/hadoop/tmp
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo chown -R hduser_:hadoop_ /app/hadoop/tmp
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo chmod 750 /app/hadoop/tmp
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo vi /etc/pro
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo vi /etc/profile.d/hadoop.sh
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ echo $HADOOP_HOME
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo vi /etc/profile.d/hadoop.sh
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo chmod +x /etc/profile.d/hadoop.sh
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ echo $HADOOP_HOME
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo cp /home/hduser_/hadoop/hadoop-2.9.0/etc/hadoop/mapred-site.xml.template /hom                                                             e/hduser_/hadoop/hadoop-2.9.0/etc/hadoop/mapred-site.xml
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ pwd
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ vi ~/.bashrc
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ . ~/.bashrc
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ echo $HADOOP_HOME
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ vi /home/hduser_/hadoop/hadoop-2.9.0/etc/hadoop/mapred-site.xml
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo vi /home/hduser_/hadoop/hadoop-2.9.0/etc/hadoop/mapred-site.xml
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo vi /home/hduser_/hadoop/hadoop-2.9.0/etc/hadoop/hdfs-site.xml
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo mkdir /home/hduser_/hdfs
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo chown -R hduser_:hadoop_ /home/hduser_/hdfs
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ sudo chmod 750 /home/hduser_/hdfs
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ $HADOOP_HOME/bin/hdfs namenode -format
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ $HADOOP_HOME/sbin/start-dfs.sh
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ $HADOOP_HOME/sbin/start-yarn.sh
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ jps
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ $HADOOP_HOME/sbin/stop-dfs.sh
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ $HADOOP_HOME/sbin/stop-yarn.sh
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ ps -ef | grep -i nodemanager
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ ps -ef | grep -i nodemanag^C
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/etc/hadoop$ exit
+hduser_@vagrant-ubuntu-trusty-64:~$ exit
+vagrant@vagrant-ubuntu-trusty-64:~$ su -
+root@vagrant-ubuntu-trusty-64:~# vi ~/.bashrc
+root@vagrant-ubuntu-trusty-64:~# echo $HADOOP_HOME
+root@vagrant-ubuntu-trusty-64:~# vi ~/.bashrc
+root@vagrant-ubuntu-trusty-64:~#  su - hduser_
+hduser_@vagrant-ubuntu-trusty-64:~$ vi /etc/profile.d/hadoop.sh
+hduser_@vagrant-ubuntu-trusty-64:~$ echo $HADOOP_HOME
+hduser_@vagrant-ubuntu-trusty-64:~$ vi /etc/profile.d/hadoop.sh
+hduser_@vagrant-ubuntu-trusty-64:~$ sudo vi /etc/profile.d/hadoop.sh
+hduser_@vagrant-ubuntu-trusty-64:~$ sudo chmod +x /etc/profile.d/hadoop.sh
+hduser_@vagrant-ubuntu-trusty-64:~$ exit
+root@vagrant-ubuntu-trusty-64:~# echo $HADOOP_HOME
+root@vagrant-ubuntu-trusty-64:~# ls
+root@vagrant-ubuntu-trusty-64:~# cd hive/
+root@vagrant-ubuntu-trusty-64:~/hive# ls
+root@vagrant-ubuntu-trusty-64:~/hive# cd apache-hive-1.2.2-bin/
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin# ls
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin# cd bin/
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# vi hive-config.sh
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# cd /home/hduser_/h
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# cd /home/hduser_/hadoop/hadoop-2.9.0/
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# vi hive-config.sh
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# ./hadoop fs -mkdir /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# cd /home/hduser_/hadoop/hadoop-2.9.0/
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0# ls
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0# cd bin/
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -mkdir /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# su - hduser_
+hduser_@vagrant-ubuntu-trusty-64:~$ $HADOOP_HOME/sbin/start-dfs.sh
+hduser_@vagrant-ubuntu-trusty-64:~$ $HADOOP_HOME/sbin/start-yarn.sh
+hduser_@vagrant-ubuntu-trusty-64:~$ su -
+hduser_@vagrant-ubuntu-trusty-64:~$ vagrant
+hduser_@vagrant-ubuntu-trusty-64:~$ su -
+root@vagrant-ubuntu-trusty-64:~# cd /home/hduser_/hadoop/hadoop-2.9.0/bin/
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -mkdir /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# echo $HADOOP_HOME
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ~/.bashrc
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# cd
+root@vagrant-ubuntu-trusty-64:~# echo $HIVE_HOME
+root@vagrant-ubuntu-trusty-64:~# ~/.bashrc
+root@vagrant-ubuntu-trusty-64:~# exit
+hduser_@vagrant-ubuntu-trusty-64:~$ exit
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# exit
+vagrant@vagrant-ubuntu-trusty-64:~$ su - hduser_
+hduser_@vagrant-ubuntu-trusty-64:~$ ~/.bashrc
+hduser_@vagrant-ubuntu-trusty-64:~$ vi ~/.bashrc
+hduser_@vagrant-ubuntu-trusty-64:~$ ls
+hduser_@vagrant-ubuntu-trusty-64:~$ cd hadoop/
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ ls
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop$ cd hadoop-2.9.0/
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0$ pwd
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0$ ls
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0$ cd bin/
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ ls
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ pwd
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ vi ~/.bashrc
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ . ~/.bashrc
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ exit
+vagrant@vagrant-ubuntu-trusty-64:~$ clear
+vagrant@vagrant-ubuntu-trusty-64:~$ su -
+vagrant@vagrant-ubuntu-trusty-64:~$ su -
+root@vagrant-ubuntu-trusty-64:~# cd /home/hduser_/hadoop/hadoop-2.9.0/bin/
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -mkdir /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# mkdir -p /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# hadoop fs -ls
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -ls
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -ls:
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -mkdir /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# exit
+vagrant@vagrant-ubuntu-trusty-64:~$ su - hduser_
+hduser_@vagrant-ubuntu-trusty-64:~$ hadoop
+hduser_@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls
+hduser_@vagrant-ubuntu-trusty-64:~$ cd $HADOOP_HOME
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0$ cd bin/
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ ./hadoop fs -mkdir /usr/hive/warehouse
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ ./hadoop fs -mkdir -p /usr/hive/warehouse
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ rm -r /usr/hive
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ ls -l /usr/hive/warehouse/
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ ls -l /usr/hive
+hduser_@vagrant-ubuntu-trusty-64:~/hadoop/hadoop-2.9.0/bin$ exit
+vagrant@vagrant-ubuntu-trusty-64:~$ su -
+root@vagrant-ubuntu-trusty-64:~# clear
+root@vagrant-ubuntu-trusty-64:~# cd /home/hduser_/hadoop/hadoop-2.9.0/bin/
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -mkdir -p /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -chmod g+w /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -rmdir -p /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -rm -r /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# cd /usr/hive/
+root@vagrant-ubuntu-trusty-64:/usr/hive# ls
+root@vagrant-ubuntu-trusty-64:/usr/hive# ls -l
+root@vagrant-ubuntu-trusty-64:/usr/hive# rm -r warehouse/
+root@vagrant-ubuntu-trusty-64:/usr/hive# ls
+root@vagrant-ubuntu-trusty-64:/usr/hive# cd ..
+root@vagrant-ubuntu-trusty-64:/usr# ls -l
+root@vagrant-ubuntu-trusty-64:/usr# rm -r hive
+root@vagrant-ubuntu-trusty-64:/usr# cd
+root@vagrant-ubuntu-trusty-64:~# cd /home/hduser_/hadoop/hadoop-2.9.0/bin/
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# clear
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -mkdir -p /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -chmod 777 /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# cd
+root@vagrant-ubuntu-trusty-64:~# ls
+root@vagrant-ubuntu-trusty-64:~# cd hive/
+root@vagrant-ubuntu-trusty-64:~/hive# ls
+root@vagrant-ubuntu-trusty-64:~/hive# cd apache-hive-1.2.2-bin/
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin# cd bin/
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# ./hive
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# ls
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# ./hive
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# vi ~/.bashrc
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# vi ~/.bashrc
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# . ~/.bashrc
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# ./hive
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# hadoop fs -ls
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# ls -l
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# jps
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin#
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin#
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# vi ~/.bashrc
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# vi ~/.bashrc
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# . ~/.bashrc
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# cd /home/hduser_/hadoop/hadoop-2.9.0/bin/
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -mkdir -p /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# ./hadoop fs -chmod g+w /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:/home/hduser_/hadoop/hadoop-2.9.0/bin# cd
+root@vagrant-ubuntu-trusty-64:~# cd
+root@vagrant-ubuntu-trusty-64:~# cd hive/
+root@vagrant-ubuntu-trusty-64:~/hive# cd apache-hive-1.2.2-bin/
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin# ./hive
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin# ls
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin# cd bin/
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# ./hive
+hive> show database
+hive> show databases;
+hive> exit
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# clear
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# sudo apt-get update
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# df -Th
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# mysql
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# hive
+hive> create table product(prodid int , pname string, price float) row format delimited fields terminated by ',';
+hive> exit;
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# clear
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/bin# cd
+root@vagrant-ubuntu-trusty-64:~# hive
+hive> show tables;
+hive> show table;
+hive> use default
+hive> show tables;
+hive> describe product ;
+hive> describe product;
+hive> show tables;
+hive> create tabe product (prodid int, pname string, price float) row format delimited fields terminated by ',';
+hive> create table product (prodid int, pname string, price float) row format delimited fields terminated by ',';
+hive> describe product;
+hive> exit;
+root@vagrant-ubuntu-trusty-64:~# sudo apt-get install mysql-server
+root@vagrant-ubuntu-trusty-64:~# sudo apt-get update
+root@vagrant-ubuntu-trusty-64:~# clear
+root@vagrant-ubuntu-trusty-64:~# sudo apt-get install libmysql-java
+root@vagrant-ubuntu-trusty-64:~# ln -s /usr/share/java/mysql-connector-java.jar /root/hive/apache-hive-1.2.2-bin/lib/mysql-connector-java.jar
+root@vagrant-ubuntu-trusty-64:~# mysql -u root -p
+mysql> CREATE USER 'mysqladmin'@'%' IDENTIFIED BY 'password';
+mysql> GRANT all on *.* to 'mysqladmin'@localhost identified by 'password'
+mysql> flush privileges;
+mysql> use metastore;
+mysql> use metastore;
+mysql> bye
+mysql> exit;
+root@vagrant-ubuntu-trusty-64:~# cd /root/hive/apache-hive-1.2.2-bin/conf/
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# ls
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# vi hive-site.xml
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# hive
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# cd
+root@vagrant-ubuntu-trusty-64:~# hive
+root@vagrant-ubuntu-trusty-64:~# cd /root/hive/apache-hive-1.2.2-bin/conf/
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# vi hive-site.xml
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# hive
+hive> create table hivetest(id int, name string);
+hive> use metastore
+hive> exit
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# clear
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# vi hive-site.xml
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# cd /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# /usr/
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# ll /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# jds
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# jfs
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# jds
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# clear
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# ls
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# cat hive-default.xml
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# hadoop fs -ls /usr/hive/warehouse
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# hive
+hive> set hive.metastore.warehouse.dir;
+hive> exit
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# vi hive-site.xml
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# hive
+hive> use metastore;
+hive> exite
+hive> exit;
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysql
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysql mysqladmin@localhost
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysqladmin@localhost
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysql
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysql -u mysqladmin -p password
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysql
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysql -u mysqladmin
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysql -u root - p
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysql -u root - p
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysql -u root -p
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# mysql -u root -p
+mysql> use metastore;
+mysql> show tables;
+mysql> select * from TBLS;
+mysql> exit;
+root@vagrant-ubuntu-trusty-64:~/hive/apache-hive-1.2.2-bin/conf# hive
+hive> show databases;
+hive> create database testdb;
+hive> show databases;
+hive> drop database testdb;
+hive> show databases;
+hive> create database testdb;
+hive> use testdb;
+hive> create table employee(empid int, empname string);
+hive> show tables;
+hive> alter table employee rename to emp_test;
+hive> create table emp_test1(id int, name string) row format delimited fields terminated by '\t';
+hive> show tables;
+hive> describe emp_test;
+hive> describe emp_test1;
+hive> load data local inpath '/home/hduser_/data.txt' into table emp_test;
+hive> select * from emp_test;
+hive> show tables;
+hive> drop table emp_test;
+hive> create table emp_int(id int, name string);
+hive> load data local inpath '/home/hduser_/data.txt' OVERWRITE INTO TABLE emp_int;
+hive> select * from emp_int;
+hive> drop table emp_int;
+hive> create table emp_int(id int, name string) row format delimited fields terminated by ',';
+hive> load data local inpath '/home/hduser_/data.txt' OVERWRITE INTO TABLE emp_int;
+hive> select * from emp_int;

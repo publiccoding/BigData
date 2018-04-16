@@ -1,0 +1,249 @@
+Consistency means that data is the same across the cluster, so you can read or write to/from any node and get the same data.
+Availability means the ability to access the cluster even if a node in the cluster goes down.
+Partition Tolerance means that the cluster continues to function even if there is a "partition" (communications break) between two nodes (both nodes are up, but can't communicate).
+In order to get both availability and partition tolerance, you have to give up consistency. Consider if you have two nodes, X and Y, in a master-master setup. Now, there is a break between network comms in X and Y, so they can't synch updates. At this point you can either:
+A) Allow the nodes to get out of sync (giving up consistency), or
+B) Consider the cluster to be "down" (giving up availability)
+
+All the combinations available are:
+
+CA - data is consistent between all nodes - as long as all nodes are online - and you can read/write from any node and be sure that the data is the same, but if you ever develop a partition between nodes, the data will be out of sync (and won't re-sync once the partition is resolved).
+CP - data is consistent between all nodes, and maintains partition tolerance (preventing data desync) by becoming unavailable when a node goes down.
+AP - nodes remain online even if they can't communicate with each other and will resync data once the partition is resolved, but you aren't guaranteed that all nodes will have the same data (either during or after the partition)
+
+
+Q&A 
+Cassandra works best on network attached storage.
+False
+How much data can a single Cassandra node effectively handle?
+1 to 3 terabytes
+In a full network partition, that is, parts of the cluster are completely disconnected from the whole, only the largest group of nodes can still satisfy queries.  
+False
+By default, how many vnodes does each node have?
+256
+Which parameter in the cassandra.yaml file configures vnodes?
+num_tokens
+When using vnodes, Cassandra automatically assigns the token ranges for you.
+True
+Nodes can only gossip with specific other nodes in the cluster.
+False
+Which of the following statements are true concerning gossip? Choose all that apply.
+Constant trickle of network traffic
+Does not cause network spikes
+Minimal compared to data streaming
+Snitch is used to...
+Determine/declare each node's rack and data center.
+Snitch is configured in the cassandra.yaml file.
+True
+Which is the following is *not* a type of snitch?
+SimpleSnitch
+PropertyFileSnitch
+DynamicSnitch
+CassandraSnitch(answer)
+A replication factor of three means that Cassandra will store a total of four copies: the master and three copies.
+False
+A replication factor greater than one...
+widens the range of token values a single node is responsible for.
+causes overlap in the token ranges amongst nodes.
+requires more storage in your cluster.
+Where does Cassandra reside in the CAP theorem?
+availability/partition tolerance
+With a replication factor of two, how many nodes must respond with success using consistency level quorum to indicate a successful operation?
+2
+With a replication factor of three, which of the following options guarantee strong consistency? Check all that apply.
+write all, read one
+write all, read quorum
+write quorum, read all
+write one, read all
+write quorum, read quorum
+The default time for a node to store a hint is:
+3 hours
+Hinted handoff is disabled by default.
+False
+Read repair always occurs when consistency level is set to...
+ALL
+What does read_repair_chance do?
+Sets the probability which Cassandra will perform a read repair with a consistency level less than ALL.
+The purpose of the commit log is...
+to replay if a crashed node restarts.
+When does a client acknowledge a write?
+After the commit log and MemTable are written
+Which of the following are stored sorted by clustering columns? Check all that apply.
+SSTable
+MemTable
+The partition summary...
+stores byte offsets into the partition index.
+The key cache...
+stores the byte offset of the most recently accessed records.
+Which of the following structures reside on disk? Check all that apply.
+SSTable
+partition index
+
+Which of the following are benefits from compaction? Check all that apply.
+More optimal disk usage
+Faster reads
+Less memory pressure
+All tombstones are discarded during compaction.
+False
+In which of the following scenarios would a new partition on disk be larger than either of its input partition segments after a compaction?  
+The input partition segments are made up of mostly INSERT operations.
+What are the three main layers (in order) of data modeling?
+Conceptual, Logical, Physical
+What command bulk-loads data files?
+COPY
+What is the smallest atomic unit of storage in Cassandra?
+Correct!
+What is a cell?
+key-value pair
+What is a partition?
+group of cells
+What is the significance of the partition key?
+Cassandra hashes the key value to determine which node the partition resides on
+What is an upsert?
+INSERTs may cause UPDATEs; UPDATEs may causes INSERTs
+What purpose do clustering columns serve?
+Provide uniqueness within the partition as well as ordering criteria
+What is the relationship between a partition key and a clustering column?
+Partition keys determine a grouping criteria whereas clustering columns determine ordering criteria
+
+Question 1 of 2
+Which is not an aspect of the CAP theorem?
+Cluster tolerance
+
+Consistency
+Partition tolerance
+Availability
+
+Where does Cassandra fit within the CAP theorem?
+Availability and Partition Tolerance
+
+Question 1 of 2
+What are the technological roots of Cassandra?
+Google BigTable and Amazon Dynamo
+What technology does Cassandra use to model data?
+CQL
+What open source library must be installed for production use?
+JNA
+
+What setting determines a node's cluster, and where is it configured?
+cassandra.yaml, cluster_name
+
+What settings might you adjust, in which configuration file, to tune Cassandra memory use?
+cassandra-env.sh, MAX_HEAP_SIZE
+
+Where do you find and set the system log file location?
+logback.xml
+
+Port 7199 is the default JMX port.
+True
+
+Which is NOT a nodetool option to provide cluster status information?
+token
+
+info
+status
+ring
+
+What tools/commands can be used to populate data in Cassandra?
+copy, SSTableLoader
+
+Which is NOT a use of CCM?
+Split a rack
+
+What is a coordinator?
+Client selected node responsible for servicing a read or write request to the cluster
+
+In a 3 node cluster with RF=2, how much total data volume does each node own?
+2/3rds of the data
+
+How could RF and CL be tuned to ensure immediate consistency?
+(nodes_written + nodes_read) > replication_factor
+
+What is the function of the nodetool repair operation?
+Synchronizes node data with the most current cluster replicas
+
+What is the relationship between a column family and a CQL table?
+Table is a two-dimensional view of a multi-dimensional column family
+
+How are wide rows displayed in CQL?
+As multiple CQL rows
+
+By default, how are clustering columns ordered?
+Ascending
+
+CQL counters are 100% accurate.
+False
+
+Which of the following are NOT allowed in a CQL query?
+GROUP BY
+
+
+How can data from two tables be combined in a CQL query?
+They can't be joined
+
+Rotational drives perform at least two head seeks when writing to the commit log.
+False
+
+Question 2 of 4
+When handling a write request, Cassandra stores the new values in MemTables and the commit log. 
+True
+
+Question 3 of 4
+Which will not cause a Memtable to flush?
+sstable_max_size is reached
+
+commitlog_total_space_in_mb is reached
+memtable_total_space_in_mb is reached
+nodetool flush
+
+What happens when a Memtable is flushed?
+Cassandra writes it to a new SSTable on disk
+
+What is compaction?
+Combining all SSTables into a single SSTable
+
+What benefit does the key cache provide?
+Allows skipping the bloom filter
+
+What is key cache used for ?
+Allows skipping the partition summary and partition index
+
+Why is the row cache turned off by default?
+To prevent double caching with the operating system
+
+Cassandra reads the partition summary read for partition keys in the key cache.
+False
+
+Which of the following statements is incorrect?
+Compaction causes several sporadic disk/head seeks
+
+Which one is NOT a disadvantage of Size-tiered compaction?
+Poor performace for write-heavy applications
+
+A single SSD has lower latency than a RAID.
+True
+
+Networked attached storage is ideal for Cassandra.
+False
+
+Adding more memory helps with...
+Reads
+
+What command drops all records from an existing table?
+TRUNCATE
+
+What command adds/removes columns to/from a table?
+ALTER
+
+Which is NOT a Cassandra column type?
+DICTIONARY<>
+
+LIST<>
+SET<>
+MAP<>
+
+Cassandra counters are always 100% accurate.
+False
+
+What command executes a file of CQL statements?
+SOURCE

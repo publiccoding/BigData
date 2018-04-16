@@ -1,0 +1,2069 @@
+
+kristhim@KRISTHIM4 MINGW64 ~/GitRepo/DevOps/vagrant/ubuntutest1 (master)
+$ vagrant ssh
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-135-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 1.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+Last login: Wed Apr  4 10:38:35 2018 from 10.0.2.2
+vagrant@vagrant-ubuntu-trusty-64:~$ clear
+vagrant@vagrant-ubuntu-trusty-64:~$ su - hduser
+Password:
+hduser@vagrant-ubuntu-trusty-64:~$ start-all.sh
+This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh
+Starting namenodes on [localhost]
+localhost: starting namenode, logging to /usr/local/hadoop/logs/hadoop-hduser-namenode-vagrant-ubuntu-trus                                                                                                        ty-64.out
+localhost: starting datanode, logging to /usr/local/hadoop/logs/hadoop-hduser-datanode-vagrant-ubuntu-trus                                                                                                        ty-64.out
+Starting secondary namenodes [0.0.0.0]
+0.0.0.0: starting secondarynamenode, logging to /usr/local/hadoop/logs/hadoop-hduser-secondarynamenode-vag                                                                                                        rant-ubuntu-trusty-64.out
+starting yarn daemons
+starting resourcemanager, logging to /usr/local/hadoop/logs/yarn-hduser-resourcemanager-vagrant-ubuntu-tru                                                                                                        sty-64.out
+localhost: starting nodemanager, logging to /usr/local/hadoop/logs/yarn-hduser-nodemanager-vagrant-ubuntu-                                                                                                        trusty-64.out
+hduser@vagrant-ubuntu-trusty-64:~$ sudo pip install py4j
+[sudo] password for hduser:
+Downloading/unpacking py4j
+  Cannot fetch index base URL https://pypi.python.org/simple/
+  Could not find any downloads that satisfy the requirement py4j
+Cleaning up...
+No distributions at all found for py4j
+Storing debug log for failure in /home/hduser/.pip/pip.log
+hduser@vagrant-ubuntu-trusty-64:~$ echo $PYTHONPATH
+/usr/local/spark/python:
+hduser@vagrant-ubuntu-trusty-64:~$ sudo vi ~/.bashrc
+hduser@vagrant-ubuntu-trusty-64:~$ sudo pip install py4j
+Downloading/unpacking py4j
+  Downloading py4j-0.10.6-py2.py3-none-any.whl (189kB): 189kB downloaded
+Installing collected packages: py4j
+Successfully installed py4j
+Cleaning up...
+hduser@vagrant-ubuntu-trusty-64:~$ vi sparktest.py
+hduser@vagrant-ubuntu-trusty-64:~$ cd /usr/local/spark/bin/
+hduser@vagrant-ubuntu-trusty-64:/usr/local/spark/bin$ cd
+hduser@vagrant-ubuntu-trusty-64:~$ spark-submit
+spark-submit: command not found
+hduser@vagrant-ubuntu-trusty-64:~$ pwd
+/home/hduser
+hduser@vagrant-ubuntu-trusty-64:~$ ls
+derby.log  hive  metastore_db  scala-2.10.4.tgz  software  sparktest.py  ${system:java.io.tmpdir}
+hduser@vagrant-ubuntu-trusty-64:~$ cd /usr/local/spark/bin/
+hduser@vagrant-ubuntu-trusty-64:/usr/local/spark/bin$ ./spark-submit /home/hduser/sparktest.py
+ParallelCollectionRDD[0] at parallelize at PythonRDD.scala:475
+[1, 4]
+hduser@vagrant-ubuntu-trusty-64:/usr/local/spark/bin$ ipython
+The program 'ipython' is currently not installed. To run 'ipython' please ask your administrator to instal                                                                                                        l the package 'ipython'
+hduser@vagrant-ubuntu-trusty-64:/usr/local/spark/bin$ sudo apt-get install ipython
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  python-decorator python-pexpect python-simplegeneric
+Suggested packages:
+  ipython-doc ipython-notebook ipython-qtconsole python-matplotlib
+  python-numpy python-zmq python-pexpect-doc
+The following NEW packages will be installed:
+  ipython python-decorator python-pexpect python-simplegeneric
+0 upgraded, 4 newly installed, 0 to remove and 84 not upgraded.
+Need to get 657 kB of archives.
+After this operation, 3,628 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main python-decorator all 3.4.0-2build1 [19.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main python-pexpect all 3.1-1ubuntu0.1 [37.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main python-simplegeneric all 0.8.1-1 [11.5 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty/universe ipython all 1.2.1-2 [588 kB]
+Fetched 657 kB in 8s (77.0 kB/s)
+Selecting previously unselected package python-decorator.
+(Reading database ... 69104 files and directories currently installed.)
+Preparing to unpack .../python-decorator_3.4.0-2build1_all.deb ...
+Unpacking python-decorator (3.4.0-2build1) ...
+Selecting previously unselected package python-pexpect.
+Preparing to unpack .../python-pexpect_3.1-1ubuntu0.1_all.deb ...
+Unpacking python-pexpect (3.1-1ubuntu0.1) ...
+Selecting previously unselected package python-simplegeneric.
+Preparing to unpack .../python-simplegeneric_0.8.1-1_all.deb ...
+Unpacking python-simplegeneric (0.8.1-1) ...
+Selecting previously unselected package ipython.
+Preparing to unpack .../ipython_1.2.1-2_all.deb ...
+Unpacking ipython (1.2.1-2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.13-1) ...
+Processing triggers for mime-support (3.54ubuntu1.1) ...
+Setting up python-decorator (3.4.0-2build1) ...
+Setting up python-pexpect (3.1-1ubuntu0.1) ...
+Setting up python-simplegeneric (0.8.1-1) ...
+Setting up ipython (1.2.1-2) ...
+hduser@vagrant-ubuntu-trusty-64:/usr/local/spark/bin$ pyspark
+pyspark: command not found
+hduser@vagrant-ubuntu-trusty-64:/usr/local/spark/bin$ ./pyspark
+Python 2.7.6 (default, Oct 26 2016, 20:30:19)
+[GCC 4.8.4] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel).
+18/04/04 10:55:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using b                                                                                                        uiltin-java classes where applicable
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 2.0.0
+      /_/
+
+Using Python version 2.7.6 (default, Oct 26 2016 20:30:19)
+SparkSession available as 'spark'.
+>>> help
+Type help() for interactive help, or help(object) for help about object.
+>>> help()
+
+Welcome to Python 2.7!  This is the online help utility.
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at http://docs.python.org/2.7/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, or topics, type "modules",
+"keywords", or "topics".  Each module also comes with a one-line summary
+of what it does; to list the modules whose summaries contain a given word
+such as "spam", type "modules spam".
+
+help> exit()
+no Python documentation found for 'exit()'
+
+help> exit
+
+help> quit
+
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.
+>>> exit()
+hduser@vagrant-ubuntu-trusty-64:/usr/local/spark/bin$ clear
+hduser@vagrant-ubuntu-trusty-64:/usr/local/spark/bin$ cd
+hduser@vagrant-ubuntu-trusty-64:~$ pyspark
+pyspark: command not found
+hduser@vagrant-ubuntu-trusty-64:~$ echo $SPARK_HOME
+/usr/local/spark
+hduser@vagrant-ubuntu-trusty-64:~$ vi ~/.bashrc
+hduser@vagrant-ubuntu-trusty-64:~$ source ~/.bashrc
+hduser@vagrant-ubuntu-trusty-64:~$ pyspark
+Python 2.7.6 (default, Oct 26 2016, 20:30:19)
+[GCC 4.8.4] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel).
+18/04/04 10:57:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using b                                                                                                        uiltin-java classes where applicable
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 2.0.0
+      /_/
+
+Using Python version 2.7.6 (default, Oct 26 2016 20:30:19)
+SparkSession available as 'spark'.
+>>> exit()
+hduser@vagrant-ubuntu-trusty-64:~$ ipython
+Python 2.7.6 (default, Oct 26 2016, 20:30:19)
+Type "copyright", "credits" or "license" for more information.
+
+IPython 1.2.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: exit()
+hduser@vagrant-ubuntu-trusty-64:~$ vi ~/.bashrc
+hduser@vagrant-ubuntu-trusty-64:~$ $SPARK_HOME/./bin/pyspark
+Python 2.7.6 (default, Oct 26 2016, 20:30:19)
+[GCC 4.8.4] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel).
+18/04/04 10:59:54 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using b                                                                                                        uiltin-java classes where applicable
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 2.0.0
+      /_/
+
+Using Python version 2.7.6 (default, Oct 26 2016 20:30:19)
+SparkSession available as 'spark'.
+>>> exit()
+hduser@vagrant-ubuntu-trusty-64:~$ vi ~/.bashrc
+hduser@vagrant-ubuntu-trusty-64:~$ source ~/.bashrc
+-su: export: `=': not a valid identifier
+-su: export: `/usr/local/spark/./bin/pyspark': not a valid identifier
+hduser@vagrant-ubuntu-trusty-64:~$ vi ~/.bashrc
+hduser@vagrant-ubuntu-trusty-64:~$ source ~/.bashrc
+=: command not found
+hduser@vagrant-ubuntu-trusty-64:~$ vi ~/.bashrc
+hduser@vagrant-ubuntu-trusty-64:~$ source ~/.bashrc
+No command '=ipython' found, did you mean:
+ Command 'ipython' from package 'ipython' (universe)
+=ipython: command not found
+hduser@vagrant-ubuntu-trusty-64:~$ vi ~/.bashrc
+hduser@vagrant-ubuntu-trusty-64:~$ source ~/.bashrc
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ set hive.cli.print.current.db=true;
+hduser@vagrant-ubuntu-trusty-64:~$ hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLog                                                                                                        gerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/s                                                                                                        lf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2                                                                                                        .properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a diffe                                                                                                        rent execution engine (i.e. tez, spark) or using Hive 1.X releases.
+hive> create table if not exists student (id int ,name string, address string)
+    > row format delimited fields terminated by '\t' lines terminated by '\n' stored as textfile;
+OK
+Time taken: 7.643 seconds
+hive>
+    > set hive.cli.print.current.db=true;
+hive (default)> create database if not exists testdb;
+OK
+Time taken: 0.245 seconds
+hive (default)> use testdb;
+OK
+Time taken: 0.092 seconds
+hive (testdb)> create table if not exists emp (id int ,name string, address string) row format delimited f                                                                                                        ields terminated by '\t' lines terminated by '\n' stored as textfile;
+OK
+Time taken: 0.498 seconds
+hive (testdb)> load data inpath '/gcp/student.txt' into table emp;
+FAILED: SemanticException Line 1:17 Invalid path ''/gcp/student.txt'': No files matching path hdfs://local                                                                                                        host:9000/gcp/student.txt
+hive (testdb)> load data inpath '/gcp_test/student.txt' into table emp;
+Loading data to table testdb.emp
+OK
+Time taken: 2.037 seconds
+hive (testdb)> select * from emp ;
+OK
+NULL    NULL    NULL
+NULL    NULL    NULL
+NULL    NULL    NULL
+Time taken: 5.699 seconds, Fetched: 3 row(s)
+hive (testdb)> create table if not exists emp (id int ,name string, address string) row format delimited f                                                                                                        ields terminated by ',' lines terminated by '\n' stored as textfile;
+OK
+Time taken: 0.184 seconds
+hive (testdb)> load data inpath '/gcp_test/emp.txt' into table emp;
+Loading data to table testdb.emp
+OK
+Time taken: 1.231 seconds
+hive (testdb)> select * from emp;
+OK
+NULL    NULL    NULL
+NULL    NULL    NULL
+NULL    NULL    NULL
+NULL    NULL    NULL
+NULL    NULL    NULL
+NULL    NULL    NULL
+Time taken: 0.46 seconds, Fetched: 6 row(s)
+hive (testdb)> create table if not exists emp (id int ,name string, address string) row format delimited f                                                                                                        ields terminated by ',' lines terminated by '\n';
+OK
+Time taken: 0.163 seconds
+hive (testdb)> select * from emp;
+OK
+NULL    NULL    NULL
+NULL    NULL    NULL
+NULL    NULL    NULL
+NULL    NULL    NULL
+NULL    NULL    NULL
+NULL    NULL    NULL
+Time taken: 0.467 seconds, Fetched: 6 row(s)
+hive (testdb)> drop table emp;
+OK
+Time taken: 6.273 seconds
+hive (testdb)> select * from emp;
+FAILED: SemanticException [Error 10001]: Line 1:14 Table not found 'emp'
+hive (testdb)> create table if not exists emp (id int ,name string, address string) row format delimited f                                                                                                        ields terminated by ',' lines terminated by '\n';
+OK
+Time taken: 0.32 seconds
+hive (testdb)> load data inpath '/gcp_test/emp.txt' into table emp;
+Loading data to table testdb.emp
+OK
+Time taken: 1.186 seconds
+hive (testdb)> select * from emp;
+OK
+100     'thimma'        'hosur'
+200     'kumar' 'bangalore'
+300     'lakshmi'       'rayakottai'
+Time taken: 0.418 seconds, Fetched: 3 row(s)
+hive (testdb)> create table if not exists student (id int ,name string, address string)
+             > row format delimited fields terminated by '\t' lines terminated by '\n' stored as textfile;                                                                                                        
+OK
+Time taken: 0.691 seconds
+hive (testdb)> load data local inpath '/home/hduser/student.txt' overwrite into student;
+FAILED: ParseException line 1:65 missing TABLE at 'student' near '<EOF>'
+hive (testdb)> load data local inpath '/home/hduser/student.txt' overwrite into table student;
+Loading data to table testdb.student
+OK
+Time taken: 1.395 seconds
+hive (testdb)> select * from student;
+OK
+NULL    1       1
+NULL    3       1
+NULL    4       2
+NULL    2       2
+NULL    5       1
+Time taken: 0.393 seconds, Fetched: 5 row(s)
+hive (testdb)> drop table student;
+OK
+Time taken: 0.436 seconds
+hive (testdb)> select * from student;
+FAILED: SemanticException [Error 10001]: Line 1:14 Table not found 'student'
+hive (testdb)> create table if not exists student (id int ,name string, address string)
+             > row format delimited fields terminated by '\t' lines terminated by '\n' stored as textfile;                                                                                                        
+OK
+Time taken: 0.249 seconds
+hive (testdb)> select * from student;
+OK
+Time taken: 0.272 seconds
+hive (testdb)> load data local inpath '/home/hduser/student.txt' overwrite into table student;
+Loading data to table testdb.student
+OK
+Time taken: 0.791 seconds
+hive (testdb)> select * from student;
+OK
+NULL            1
+NULL            3
+NULL            4
+NULL    2       2
+NULL            5
+Time taken: 0.263 seconds, Fetched: 5 row(s)
+hive (testdb)> drop table student;
+OK
+Time taken: 0.481 seconds
+hive (testdb)> create table if not exists student (id int ,name string, address string)
+             > row format delimited fields terminated by '\t' lines terminated by '\n' stored as textfile;                                                                                                        
+OK
+Time taken: 0.258 seconds
+hive (testdb)> select * from student;
+OK
+Time taken: 0.476 seconds
+hive (testdb)> load data local inpath '/home/hduser/student.txt' overwrite into table student;
+Loading data to table testdb.student
+OK
+Time taken: 1.244 seconds
+hive (testdb)> select * from student;
+OK
+NULL    1       1
+NULL    3       3
+NULL    4       4
+NULL    3       2
+NULL    5       3
+Time taken: 0.256 seconds, Fetched: 5 row(s)
+hive (testdb)> drop table student;
+OK
+Time taken: 0.272 seconds
+hive (testdb)> create table if not exists student (name string, id int, year int)
+             > row format delimited fields terminated by '\t' lines terminated by '\n' stored as textfile;                                                                                                        
+OK
+Time taken: 0.195 seconds
+hive (testdb)> select * from student;
+OK
+Time taken: 0.251 seconds
+hive (testdb)> load data local inpath '/home/hduser/student.txt' overwrite into table student;
+Loading data to table testdb.student
+OK
+Time taken: 0.628 seconds
+hive (testdb)> select * from student;
+OK
+'arun'  1       1
+'anil'  3       3
+'rahul' 4       4
+'venkat'        3       2
+'kumar' 5       3
+Time taken: 0.254 seconds, Fetched: 5 row(s)
+hive (testdb)> create table if not exists part_example(id int, name string, group string, year int ) parti                                                                                                        tioned by (year int) row format delimited fields terminated by ',' lines terminated by '\n' stored as text                                                                                                        file;
+FailedPredicateException(identifier,{useSQL11ReservedKeywordsForIdentifier()}?)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.identifier(HiveParser_IdentifiersP                                                                                                        arser.java:11898)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.identifier(HiveParser.java:51813)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.columnNameType(HiveParser.java:42051)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.columnNameTypeOrPKOrFK(HiveParser.java:42308)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.columnNameTypeOrPKOrFKList(HiveParser.java:37966)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.createTableStatement(HiveParser.java:5259)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.ddlStatement(HiveParser.java:2763)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.execStatement(HiveParser.java:1756)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1178)
+        at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:204)
+        at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:166)
+        at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:444)
+        at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1242)
+        at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1384)
+        at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1171)
+        at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1161)
+        at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:232)
+        at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:183)
+        at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:399)
+        at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:776)
+        at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:714)
+        at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:641)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+FAILED: ParseException line 1:61 Failed to recognize predicate 'group'. Failed rule: 'identifier' in colum                                                                                                        n specification
+hive (testdb)> create table if not exists part_example(id int, name string, dept string, year int ) partit                                                                                                        ioned by (year int) row format delimited fields terminated by ',' lines terminated by '\n' stored as textf                                                                                                        ile;
+FAILED: SemanticException [Error 10035]: Column repeated in partitioning columns
+hive (testdb)> create table if not exists part_example(id int, name string, dept string) partitioned by (y                                                                                                        ear int) row format delimited fields terminated by ',' lines terminated by '\n' stored as textfile;
+OK
+Time taken: 0.5 seconds
+hive (testdb)> select * from part_example;
+OK
+Time taken: 0.568 seconds
+hive (testdb)> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition(year                                                                                                         int);
+FAILED: ParseException line 1:91 extraneous input 'int' expecting ) near '<EOF>'
+hive (testdb)> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition by(ye                                                                                                        ar int);
+FAILED: ParseException line 1:86 extraneous input 'by' expecting ( near '<EOF>'
+line 1:94 extraneous input 'int' expecting ) near '<EOF>'
+hive (testdb)> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition by(ye                                                                                                        ar string);
+FAILED: ParseException line 1:86 extraneous input 'by' expecting ( near '<EOF>'
+line 1:94 extraneous input 'string' expecting ) near '<EOF>'
+hive (testdb)> select * from student;
+OK
+'arun'  1       1
+'anil'  3       3
+'rahul' 4       4
+'venkat'        3       2
+'kumar' 5       3
+Time taken: 0.44 seconds, Fetched: 5 row(s)
+hive (testdb)> set hive.exec.dynamic.partition.mode=nonstrict
+             > ;
+hive (testdb)> create table if not exists part_example(id int, name string, dept string) partitioned by (y                                                                                                        ear int) row format delimited fields terminated by ',' lines terminated by '\n' stored as textfile;
+OK
+Time taken: 0.101 seconds
+hive (testdb)> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition by(ye                                                                                                        ar int);
+FAILED: ParseException line 1:86 extraneous input 'by' expecting ( near '<EOF>'
+line 1:94 extraneous input 'int' expecting ) near '<EOF>'
+hive (testdb)> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition(year)                                                                                                        ;
+FAILED: NullPointerException null
+hive (testdb)> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition by (y                                                                                                        ear);
+FAILED: ParseException line 1:86 extraneous input 'by' expecting ( near '<EOF>'
+hive (testdb)> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition (year                                                                                                         int);
+FAILED: ParseException line 1:92 extraneous input 'int' expecting ) near '<EOF>'
+hive (testdb)> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition (year                                                                                                        int);                                                                                             hduser@vagrant-ubuntu-trusty-64                                                                                 :~$ hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerB                                                                                 inder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (                                                                                 i.e. tez, spark) or using Hive 1.X releases.
+hive> SET hive.exec.dynamic.partition = true;
+hive> SET hive.exec.dynamic.partition.mode = nonstrict;
+hive> SET hive.exec.max.dynamic.partitions.pernode = 400;
+hive> load data inpath '/gcp_test/student1.txt' overwrite into table part_example ;
+FAILED: SemanticException [Error 10001]: Line 1:63 Table not found 'part_example'
+hive> create table if not exists part_example(id int, name string, dept string) partitioned by (year int) row format delimited fi                                                                                 elds terminated by ',' lines terminated by '\n' stored as textfile;
+OK
+Time taken: 2.633 seconds
+hive> load data inpath '/gcp_test/student1.txt' overwrite into table part_example ;
+FAILED: SemanticException [Error 10062]: Need to specify partition columns because the destination table is partitioned
+hive> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition(year);
+FAILED: NullPointerException null
+hive> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition(year=int);
+NoViableAltException(144@[244:1: constant : ( Number | dateLiteral | timestampLiteral | intervalLiteral | StringLiteral | stringL                                                                                 iteralSequence | BigintLiteral | SmallintLiteral | TinyintLiteral | DecimalLiteral | charSetStringLiteral | booleanValue );])
+        at org.antlr.runtime.DFA.noViableAlt(DFA.java:158)
+        at org.antlr.runtime.DFA.predict(DFA.java:116)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.constant(HiveParser_IdentifiersParser.java:4979)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.partitionVal(HiveParser_IdentifiersParser.java:10916)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.partitionSpec(HiveParser_IdentifiersParser.java:10750)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.tableOrPartition(HiveParser_IdentifiersParser.java:10628)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.tableOrPartition(HiveParser.java:51854)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.loadStatement(HiveParser.java:1965)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.execStatement(HiveParser.java:1711)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1178)
+        at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:204)
+        at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:166)
+        at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:444)
+        at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1242)
+        at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1384)
+        at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1171)
+        at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1161)
+        at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:232)
+        at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:183)
+        at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:399)
+        at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:776)
+        at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:714)
+        at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:641)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+FAILED: ParseException line 1:91 cannot recognize input near 'int' ')' '<EOF>' in constant
+hive> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition(year,int);
+FailedPredicateException(identifier,{useSQL11ReservedKeywordsForIdentifier()}?)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.identifier(HiveParser_IdentifiersParser.java:11898)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.partitionVal(HiveParser_IdentifiersParser.java:10891)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.partitionSpec(HiveParser_IdentifiersParser.java:10778)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.tableOrPartition(HiveParser_IdentifiersParser.java:10628)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.tableOrPartition(HiveParser.java:51854)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.loadStatement(HiveParser.java:1965)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.execStatement(HiveParser.java:1711)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1178)
+        at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:204)
+        at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:166)
+        at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:444)
+        at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1242)
+        at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1384)
+        at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1171)
+        at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1161)
+        at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:232)
+        at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:183)
+        at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:399)
+        at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:776)
+        at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:714)
+        at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:641)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+FAILED: ParseException line 1:91 Failed to recognize predicate 'int'. Failed rule: 'identifier' in load statement
+hive> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition(year int);
+FAILED: ParseException line 1:91 extraneous input 'int' expecting ) near '<EOF>'
+hive> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition (year int);
+FAILED: ParseException line 1:92 extraneous input 'int' expecting ) near '<EOF>'
+hive> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition (year int)
+    > ;
+FAILED: ParseException line 1:92 extraneous input 'int' expecting ) near '<EOF>'
+hive> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition (year=2012)
+    > ;
+Loading data to table default.part_example partition (year=2012)
+OK
+Time taken: 3.663 seconds
+hive> load data inpath '/gcp_test/student1.txt' overwrite into table part_example partition (year=2013);
+FAILED: SemanticException Line 1:17 Invalid path ''/gcp_test/student1.txt'': No files matching path hdfs://localhost:9000/gcp_test/stude                                                                          nt1.txt
+hive> drop table part_example;
+OK
+Time taken: 6.767 seconds
+hive> create table if not exists part_example(id int, name string, dept string) partitioned by (year int) row format delimited fields te                                                                          rminated by ',' lines terminated by '\n' stored as textfile;
+OK
+Time taken: 0.34 seconds
+hive> select * from part_example;
+OK
+Time taken: 5.149 seconds
+hive> load data local inpath '/home/hduser/student1.txt' overwrite into table part_example partition (year=2012,year=2013);
+Loading data to table default.part_example partition (year=2012)
+OK
+Time taken: 2.959 seconds
+hive> select * from part_example;
+OK
+1        'gopal'         'TP'   2012
+2        'kiran'         'HR'   2012
+3        'kaleel'       'SC'    2012
+4        'Prasanth'      'SC'   2012
+Time taken: 0.886 seconds, Fetched: 4 row(s)
+hive> drop table part_example;
+OK
+Time taken: 0.78 seconds
+hive> create table if not exists part_example(id int, name string, dept string) partitioned by (year int) row format delimited fields te                                                                          rminated by ',' lines terminated by '\n' stored as textfile;
+OK
+Time taken: 0.348 seconds
+hive> select * from part_example;
+OK
+Time taken: 0.531 seconds
+hive> load data local inpath '/home/hduser/student1.txt' overwrite into table part_example partition (year int);
+FAILED: ParseException line 1:101 extraneous input 'int' expecting ) near '<EOF>'
+hive> drop table part_example;
+OK
+Time taken: 0.489 seconds
+hive> create table if not exists part_example(id int, name string, dept string) partitioned by (year int) row format delimited fields te                                                                          rminated by ',' lines terminated by '\n' stored as textfile;
+OK
+Time taken: 0.278 seconds
+hive> select * from part_example;
+OK
+Time taken: 0.659 seconds
+hive> load data local inpath '/home/hduser/student1.txt' overwrite into table part_example partition (year=2012);
+Loading data to table default.part_example partition (year=2012)
+OK
+Time taken: 2.435 seconds
+hive> load data local inpath '/home/hduser/student2.txt' overwrite into table part_example partition (year=2013);
+Loading data to table default.part_example partition (year=2013)
+OK
+Time taken: 2.252 seconds
+hive> select * from part_example;
+OK
+1        'gopal'         'TP'   2012
+2        'kiran'         'HR'   2012
+3        'kaleel'       'SC'    2013
+4        'Prasanth'      'SC'   2013
+Time taken: 0.578 seconds, Fetched: 4 row(s)
+hive> set hive.enforce.bucketing = true;
+hive> show tables;
+OK
+all_state
+part_example
+student
+Time taken: 0.113 seconds, Fetched: 3 row(s)
+hive> drop table all_state;
+OK
+Time taken: 0.878 seconds
+hive> drop table all_state;
+OK
+Time taken: 0.547 seconds
+hive> show tables;
+OK
+part_example
+student
+Time taken: 0.098 seconds, Fetched: 2 row(s)
+hive> show tables;
+OK
+all_state
+bucket_example
+part_example
+student
+Time taken: 0.091 seconds, Fetched: 4 row(s)
+hive> select * from bucket
+bucket    buckets
+hive> select * from bucket_example
+    > ;
+OK
+Time taken: 0.605 seconds
+hive> drop table all_state;
+OK
+Time taken: 0.478 seconds
+hive> drop table bucket_example;
+OK
+Time taken: 0.537 seconds
+hive> drop table bucket_example;
+OK
+Time taken: 0.385 seconds
+hive> drop table all_state;
+OK
+Time taken: 0.303 seconds
+hive> drop table all_state;
+OK
+Time taken: 0.919 seconds
+hive> drop table bucket_example;
+OK
+Time taken: 0.769 seconds
+hive> drop table bucket_example;
+OK
+Time taken: 0.063 seconds
+hive> drop table all_state;
+OK
+Time taken: 0.614 seconds
+hive> show tables;
+OK
+all_state
+part_example
+student
+Time taken: 0.278 seconds, Fetched: 3 row(s)
+hive> drop table all_state
+    > ;
+OK
+Time taken: 0.843 seconds
+hive> exit
+    > ;
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /gcp
+ls: `/gcp': No such file or directory
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /
+Found 6 items
+drwxr-xr-x   - hduser supergroup          0 2018-04-04 13:11 /gcp_test
+drwxr-xr-x   - hduser supergroup          0 2018-04-02 14:10 /sqoop_test
+drwxr-xr-x   - hduser supergroup          0 2018-04-02 14:04 /sqooptest
+drwxrwxrwx   - hduser supergroup          0 2018-04-03 05:23 /tmp
+drwxr-xr-x   - hduser supergroup          0 2018-04-03 05:20 /user
+drwxr-xr-x   - hduser supergroup          0 2018-04-03 10:07 /usr
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -rm -r /sqoop_test
+18/04/04 14:29:03 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /sqoop_test
+hduser@vagrant-ubuntu-trusty-64:~$ mysql -u mysql -p 'mysql'
+Enter password:
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 142
+Server version: 5.5.59-0ubuntu0.14.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use testdb;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_testdb |
++------------------+
+| emp              |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> exit
+Bye
+hduser@vagrant-ubuntu-trusty-64:~$ sqoop import --connect jdbc:mysql://localhost/testdb --username mysql --password mysql --table emp --                                                                          m 1 --target-dir /sqoop_test
+Warning: /usr/local/sqoop/../hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/local/sqoop/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /usr/local/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /usr/local/sqoop/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+18/04/04 14:38:35 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+18/04/04 14:38:35 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/04/04 14:38:37 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/04/04 14:38:37 INFO tool.CodeGenTool: Beginning code generation
+18/04/04 14:38:38 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `emp` AS t LIMIT 1
+18/04/04 14:38:38 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `emp` AS t LIMIT 1
+18/04/04 14:38:38 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /usr/local/hadoop
+Note: /tmp/sqoop-hduser/compile/35fd82d4f9310542f2a390ec952bde60/emp.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+18/04/04 14:38:45 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hduser/compile/35fd82d4f9310542f2a390ec952bde60/emp.jar
+18/04/04 14:38:45 WARN manager.MySQLManager: It looks like you are importing from mysql.
+18/04/04 14:38:45 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+18/04/04 14:38:45 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+18/04/04 14:38:45 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+18/04/04 14:38:45 INFO mapreduce.ImportJobBase: Beginning import of emp
+18/04/04 14:38:46 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/04/04 14:38:49 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/04/04 14:38:50 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+18/04/04 14:38:52 WARN hdfs.DFSClient: DataStreamer Exception
+org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0002/libjars                                                                          /avro-mapred-1.7.5-hadoop2.jar could only be replicated to 0 nodes instead of minReplication (=1).  There are 0 datanode(s) running and                                                                           no node(s) are excluded in this operation.
+        at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:1559)
+        at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:3245)
+        at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:663)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTrans                                                                          latorPB.java:482)
+        at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenode                                                                          ProtocolProtos.java)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+        at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:975)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2040)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2036)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:421)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1656)
+        at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2034)
+
+        at org.apache.hadoop.ipc.Client.call(Client.java:1469)
+        at org.apache.hadoop.ipc.Client.call(Client.java:1400)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+        at com.sun.proxy.$Proxy9.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.addBlock(ClientNamenodeProtocolTranslatorPB.java:399)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+        at com.sun.proxy.$Proxy10.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.locateFollowingBlock(DFSOutputStream.java:1532)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1349)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:588)
+18/04/04 14:38:52 INFO mapreduce.JobSubmitter: Cleaning up the staging area /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0                                                                          002
+18/04/04 14:38:52 ERROR tool.ImportTool: Encountered IOException running import job: org.apache.hadoop.ipc.RemoteException(java.io.IOExc                                                                          eption): File /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0002/libjars/avro-mapred-1.7.5-hadoop2.jar could only be replic                                                                          ated to 0 nodes instead of minReplication (=1).  There are 0 datanode(s) running and no node(s) are excluded in this operation.
+        at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:1559)
+        at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:3245)
+        at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:663)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTrans                                                                          latorPB.java:482)
+        at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenode                                                                          ProtocolProtos.java)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+        at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:975)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2040)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2036)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:421)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1656)
+        at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2034)
+
+        at org.apache.hadoop.ipc.Client.call(Client.java:1469)
+        at org.apache.hadoop.ipc.Client.call(Client.java:1400)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+        at com.sun.proxy.$Proxy9.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.addBlock(ClientNamenodeProtocolTranslatorPB.java:399)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+        at com.sun.proxy.$Proxy10.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.locateFollowingBlock(DFSOutputStream.java:1532)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1349)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:588)
+
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ cd $SQOOP_HOME
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop$ ls
+bin        CHANGELOG.txt  conf  ivy      lib          NOTICE.txt   README.txt       sqoop-patch-review.py  src
+build.xml  COMPILING.txt  docs  ivy.xml  LICENSE.txt  pom-old.xml  sqoop-1.4.6.jar  sqoop-test-1.4.6.jar   testdata
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop$ cd bin/
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ ls
+configure-sqoop      sqoop.cmd                sqoop-export             sqoop-import-mainframe  sqoop-merge         stop-metastore.sh
+configure-sqoop.cmd  sqoop-codegen            sqoop-help               sqoop-job               sqoop-metastore
+emp.java             sqoop-create-hive-table  sqoop-import             sqoop-list-databases    sqoop-version
+sqoop                sqoop-eval               sqoop-import-all-tables  sqoop-list-tables       start-metastore.sh
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ ./st
+start-metastore.sh  stop-metastore.sh
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ ./start-metastore.sh
+Missing argument: -p pidfilename
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ start-metastore.sh
+Missing argument: -p pidfilename
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ sh start-metastore.sh
+Missing argument: -p pidfilename
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ cd
+hduser@vagrant-ubuntu-trusty-64:~$ sqoop import --connect jdbc:mysql://localhost/testdb --username mysql --password mysql --table emp --                                                                          m 1 --target-dir /sqoop_test
+Warning: /usr/local/sqoop/../hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/local/sqoop/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /usr/local/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /usr/local/sqoop/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+18/04/04 14:41:31 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+18/04/04 14:41:31 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/04/04 14:41:34 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/04/04 14:41:34 INFO tool.CodeGenTool: Beginning code generation
+18/04/04 14:41:36 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `emp` AS t LIMIT 1
+18/04/04 14:41:36 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `emp` AS t LIMIT 1
+18/04/04 14:41:36 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /usr/local/hadoop
+Note: /tmp/sqoop-hduser/compile/e8a89f0fe206ce9014e45aa55c87f027/emp.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+18/04/04 14:41:53 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hduser/compile/e8a89f0fe206ce9014e45aa55c87f027/emp.jar
+18/04/04 14:41:53 WARN manager.MySQLManager: It looks like you are importing from mysql.
+18/04/04 14:41:53 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+18/04/04 14:41:53 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+18/04/04 14:41:53 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+18/04/04 14:41:53 INFO mapreduce.ImportJobBase: Beginning import of emp
+18/04/04 14:41:57 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/04/04 14:42:03 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/04/04 14:42:04 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+18/04/04 14:42:09 WARN hdfs.DFSClient: DataStreamer Exception
+org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0003/libjars                                                                          /avro-mapred-1.7.5-hadoop2.jar could only be replicated to 0 nodes instead of minReplication (=1).  There are 0 datanode(s) running and                                                                           no node(s) are excluded in this operation.
+        at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:1559)
+        at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:3245)
+        at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:663)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTrans                                                                          latorPB.java:482)
+        at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenode                                                                          ProtocolProtos.java)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+        at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:975)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2040)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2036)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:421)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1656)
+        at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2034)
+
+        at org.apache.hadoop.ipc.Client.call(Client.java:1469)
+        at org.apache.hadoop.ipc.Client.call(Client.java:1400)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+        at com.sun.proxy.$Proxy9.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.addBlock(ClientNamenodeProtocolTranslatorPB.java:399)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+        at com.sun.proxy.$Proxy10.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.locateFollowingBlock(DFSOutputStream.java:1532)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1349)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:588)
+18/04/04 14:42:09 INFO mapreduce.JobSubmitter: Cleaning up the staging area /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0                                                                          003
+18/04/04 14:42:09 ERROR tool.ImportTool: Encountered IOException running import job: org.apache.hadoop.ipc.RemoteException(java.io.IOExc                                                                          eption): File /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0003/libjars/avro-mapred-1.7.5-hadoop2.jar could only be replic                                                                          ated to 0 nodes instead of minReplication (=1).  There are 0 datanode(s) running and no node(s) are excluded in this operation.
+        at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:1559)
+        at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:3245)
+        at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:663)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTrans                                                                          latorPB.java:482)
+        at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenode                                                                          ProtocolProtos.java)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+        at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:975)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2040)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2036)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:421)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1656)
+        at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2034)
+
+        at org.apache.hadoop.ipc.Client.call(Client.java:1469)
+        at org.apache.hadoop.ipc.Client.call(Client.java:1400)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+        at com.sun.proxy.$Proxy9.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.addBlock(ClientNamenodeProtocolTranslatorPB.java:399)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+        at com.sun.proxy.$Proxy10.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.locateFollowingBlock(DFSOutputStream.java:1532)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1349)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:588)
+
+hduser@vagrant-ubuntu-trusty-64:~$ jps
+2993 ResourceManager
+2819 SecondaryNameNode
+3142 NodeManager
+11879 RunJar
+2461 NameNode
+11998 Jps
+hduser@vagrant-ubuntu-trusty-64:~$ wget -q0 - localhost:12000/sqoop/version
+wget: invalid option -- '0'
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+hduser@vagrant-ubuntu-trusty-64:~$ wget -qo - localhost:12000/sqoop/version
+hduser@vagrant-ubuntu-trusty-64:~$ sqoop
+Warning: /usr/local/sqoop/../hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/local/sqoop/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /usr/local/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /usr/local/sqoop/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+Try 'sqoop help' for usage.
+hduser@vagrant-ubuntu-trusty-64:~$ sqoop version
+Warning: /usr/local/sqoop/../hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/local/sqoop/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /usr/local/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /usr/local/sqoop/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+18/04/04 14:44:04 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+Sqoop 1.4.6
+git commit id c0c5a81723759fa575844a0a1eae8f510fa32c25
+Compiled by root on Mon Apr 27 14:38:36 CST 2015
+hduser@vagrant-ubuntu-trusty-64:~$ cd $SQOOP_HOME
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop$ cd bin/
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ clear
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ sqoop
+Warning: /usr/local/sqoop/../hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/local/sqoop/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /usr/local/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /usr/local/sqoop/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+Try 'sqoop help' for usage.
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ sqoop import --connect jdbc:mysql://localhost/testdb --username mysql --password m                                                                          ysql --table emp --m 1 --target-dir /sqoop_test
+Warning: /usr/local/sqoop/../hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/local/sqoop/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /usr/local/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /usr/local/sqoop/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+18/04/04 14:48:55 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+18/04/04 14:48:55 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/04/04 14:48:59 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/04/04 14:48:59 INFO tool.CodeGenTool: Beginning code generation
+18/04/04 14:49:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `emp` AS t LIMIT 1
+18/04/04 14:49:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `emp` AS t LIMIT 1
+18/04/04 14:49:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /usr/local/hadoop
+Note: /tmp/sqoop-hduser/compile/8bda93518bf1cf09ab858eb48d70d6f8/emp.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+18/04/04 14:49:20 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hduser/compile/8bda93518bf1cf09ab858eb48d70d6f8/emp.jar
+18/04/04 14:49:20 WARN manager.MySQLManager: It looks like you are importing from mysql.
+18/04/04 14:49:20 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+18/04/04 14:49:20 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+18/04/04 14:49:20 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+18/04/04 14:49:20 INFO mapreduce.ImportJobBase: Beginning import of emp
+18/04/04 14:49:24 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/04/04 14:49:31 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/04/04 14:49:32 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+18/04/04 14:49:38 WARN hdfs.DFSClient: DataStreamer Exception
+org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0004/libjars                                                                          /avro-mapred-1.7.5-hadoop2.jar could only be replicated to 0 nodes instead of minReplication (=1).  There are 0 datanode(s) running and                                                                           no node(s) are excluded in this operation.
+        at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:1559)
+        at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:3245)
+        at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:663)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTrans                                                                          latorPB.java:482)
+        at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenode                                                                          ProtocolProtos.java)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+        at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:975)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2040)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2036)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:421)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1656)
+        at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2034)
+
+        at org.apache.hadoop.ipc.Client.call(Client.java:1469)
+        at org.apache.hadoop.ipc.Client.call(Client.java:1400)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+        at com.sun.proxy.$Proxy9.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.addBlock(ClientNamenodeProtocolTranslatorPB.java:399)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+        at com.sun.proxy.$Proxy10.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.locateFollowingBlock(DFSOutputStream.java:1532)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1349)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:588)
+18/04/04 14:49:38 INFO mapreduce.JobSubmitter: Cleaning up the staging area /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0                                                                          004
+18/04/04 14:49:38 ERROR tool.ImportTool: Encountered IOException running import job: org.apache.hadoop.ipc.RemoteException(java.io.IOExc                                                                          eption): File /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0004/libjars/avro-mapred-1.7.5-hadoop2.jar could only be replic                                                                          ated to 0 nodes instead of minReplication (=1).  There are 0 datanode(s) running and no node(s) are excluded in this operation.
+        at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:1559)
+        at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:3245)
+        at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:663)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTrans                                                                          latorPB.java:482)
+        at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenode                                                                          ProtocolProtos.java)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+        at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:975)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2040)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2036)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:421)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1656)
+        at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2034)
+
+        at org.apache.hadoop.ipc.Client.call(Client.java:1469)
+        at org.apache.hadoop.ipc.Client.call(Client.java:1400)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+        at com.sun.proxy.$Proxy9.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.addBlock(ClientNamenodeProtocolTranslatorPB.java:399)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+        at com.sun.proxy.$Proxy10.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.locateFollowingBlock(DFSOutputStream.java:1532)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1349)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:588)
+
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ sqoop import --connect jdbc:mysql://localhost/testdb --username mysql --password m                                                                          ysql --table emp --m 1 --target-dir /sqoop_test
+Warning: /usr/local/sqoop/../hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/local/sqoop/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /usr/local/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /usr/local/sqoop/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+18/04/04 14:54:10 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+18/04/04 14:54:10 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/04/04 14:54:13 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/04/04 14:54:13 INFO tool.CodeGenTool: Beginning code generation
+18/04/04 14:54:15 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `emp` AS t LIMIT 1
+18/04/04 14:54:15 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `emp` AS t LIMIT 1
+18/04/04 14:54:15 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /usr/local/hadoop
+Note: /tmp/sqoop-hduser/compile/6ddf889110f38c5f3ce6e7dc79ef36bf/emp.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+18/04/04 14:54:28 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hduser/compile/6ddf889110f38c5f3ce6e7dc79ef36bf/emp.jar
+18/04/04 14:54:28 WARN manager.MySQLManager: It looks like you are importing from mysql.
+18/04/04 14:54:28 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+18/04/04 14:54:28 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+18/04/04 14:54:28 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+18/04/04 14:54:28 INFO mapreduce.ImportJobBase: Beginning import of emp
+18/04/04 14:54:31 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/04/04 14:54:37 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/04/04 14:54:38 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+18/04/04 14:54:42 WARN hdfs.DFSClient: DataStreamer Exception
+org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0005/libjars                                                                          /avro-mapred-1.7.5-hadoop2.jar could only be replicated to 0 nodes instead of minReplication (=1).  There are 0 datanode(s) running and                                                                           no node(s) are excluded in this operation.
+        at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:1559)
+        at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:3245)
+        at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:663)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTrans                                                                          latorPB.java:482)
+        at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenode                                                                          ProtocolProtos.java)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+        at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:975)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2040)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2036)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:421)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1656)
+        at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2034)
+
+        at org.apache.hadoop.ipc.Client.call(Client.java:1469)
+        at org.apache.hadoop.ipc.Client.call(Client.java:1400)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+        at com.sun.proxy.$Proxy9.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.addBlock(ClientNamenodeProtocolTranslatorPB.java:399)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+        at com.sun.proxy.$Proxy10.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.locateFollowingBlock(DFSOutputStream.java:1532)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1349)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:588)
+18/04/04 14:54:42 INFO mapreduce.JobSubmitter: Cleaning up the staging area /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0                                                                          005
+18/04/04 14:54:42 ERROR tool.ImportTool: Encountered IOException running import job: org.apache.hadoop.ipc.RemoteException(java.io.IOExc                                                                          eption): File /tmp/hadoop-yarn/staging/hduser/.staging/job_1522838529427_0005/libjars/avro-mapred-1.7.5-hadoop2.jar could only be replic                                                                          ated to 0 nodes instead of minReplication (=1).  There are 0 datanode(s) running and no node(s) are excluded in this operation.
+        at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:1559)
+        at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:3245)
+        at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:663)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTrans                                                                          latorPB.java:482)
+        at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenode                                                                          ProtocolProtos.java)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+        at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:975)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2040)
+        at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2036)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:421)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1656)
+        at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2034)
+
+        at org.apache.hadoop.ipc.Client.call(Client.java:1469)
+        at org.apache.hadoop.ipc.Client.call(Client.java:1400)
+        at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+        at com.sun.proxy.$Proxy9.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.addBlock(ClientNamenodeProtocolTranslatorPB.java:399)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+        at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+        at com.sun.proxy.$Proxy10.addBlock(Unknown Source)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.locateFollowingBlock(DFSOutputStream.java:1532)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1349)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:588)
+
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ clear
+hduser@vagrant-ubuntu-trusty-64:/usr/local/sqoop/bin$ cd
+hduser@vagrant-ubuntu-trusty-64:~$ sqoop import --connect jdbc:mysql://localhost/testdb --username mysql --password mysql --table emp --                                                                          m 1 --target-dir /sqoop_test
+Warning: /usr/local/sqoop/../hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/local/sqoop/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /usr/local/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /usr/local/sqoop/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+18/04/04 15:10:32 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+18/04/04 15:10:32 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/04/04 15:10:37 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/04/04 15:10:37 INFO tool.CodeGenTool: Beginning code generation
+18/04/04 15:10:39 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `emp` AS t LIMIT 1
+18/04/04 15:10:39 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `emp` AS t LIMIT 1
+18/04/04 15:10:39 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /usr/local/hadoop
+Note: /tmp/sqoop-hduser/compile/25066b675c2e15ecd52300f864a47c97/emp.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+18/04/04 15:10:58 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hduser/compile/25066b675c2e15ecd52300f864a47c97/emp.jar
+18/04/04 15:10:58 WARN manager.MySQLManager: It looks like you are importing from mysql.
+18/04/04 15:10:58 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+18/04/04 15:10:58 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+18/04/04 15:10:58 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+18/04/04 15:10:58 INFO mapreduce.ImportJobBase: Beginning import of emp
+18/04/04 15:11:02 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/04/04 15:11:09 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/04/04 15:11:10 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+18/04/04 15:11:26 INFO db.DBInputFormat: Using read commited transaction isolation
+18/04/04 15:11:26 INFO mapreduce.JobSubmitter: number of splits:1
+18/04/04 15:11:27 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1522854631174_0001
+18/04/04 15:11:31 INFO impl.YarnClientImpl: Submitted application application_1522854631174_0001
+18/04/04 15:11:32 INFO mapreduce.Job: The url to track the job: http://vagrant-ubuntu-trusty-64:8088/proxy/application_1522854631174_000                                                                          1/
+18/04/04 15:11:32 INFO mapreduce.Job: Running job: job_1522854631174_0001
+18/04/04 15:12:12 INFO mapreduce.Job: Job job_1522854631174_0001 running in uber mode : false
+18/04/04 15:12:12 INFO mapreduce.Job:  map 0% reduce 0%
+18/04/04 15:12:43 INFO mapreduce.Job:  map 100% reduce 0%
+18/04/04 15:12:45 INFO mapreduce.Job: Job job_1522854631174_0001 completed successfully
+18/04/04 15:12:46 INFO mapreduce.Job: Counters: 30
+        File System Counters
+                FILE: Number of bytes read=0
+                FILE: Number of bytes written=124193
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=87
+                HDFS: Number of bytes written=67
+                HDFS: Number of read operations=4
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+        Job Counters
+                Launched map tasks=1
+                Other local map tasks=1
+                Total time spent by all maps in occupied slots (ms)=24467
+                Total time spent by all reduces in occupied slots (ms)=0
+                Total time spent by all map tasks (ms)=24467
+                Total vcore-milliseconds taken by all map tasks=24467
+                Total megabyte-milliseconds taken by all map tasks=25054208
+        Map-Reduce Framework
+                Map input records=3
+                Map output records=3
+                Input split bytes=87
+                Spilled Records=0
+                Failed Shuffles=0
+                Merged Map outputs=0
+                GC time elapsed (ms)=313
+                CPU time spent (ms)=3150
+                Physical memory (bytes) snapshot=103124992
+                Virtual memory (bytes) snapshot=794468352
+                Total committed heap usage (bytes)=31850496
+        File Input Format Counters
+                Bytes Read=0
+        File Output Format Counters
+                Bytes Written=67
+18/04/04 15:12:46 INFO mapreduce.ImportJobBase: Transferred 67 bytes in 96.4643 seconds (0.6946 bytes/sec)
+18/04/04 15:12:46 INFO mapreduce.ImportJobBase: Retrieved 3 records.
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /sqoop_test/
+Found 2 items
+-rw-r--r--   1 hduser supergroup          0 2018-04-04 15:12 /sqoop_test/_SUCCESS
+-rw-r--r--   1 hduser supergroup         67 2018-04-04 15:12 /sqoop_test/part-m-00000
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -cat /sqoop_test/part-m-00000
+100,thimma,varaganappalli
+100,kumar,nagamangalam
+100,lakshmi,hosur
+hduser@vagrant-ubuntu-trusty-64:~$
+
+kristhim@KRISTHIM4 MINGW64 ~/GitRepo/DevOps/vagrant/ubuntutest1 (master)
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: There was a problem while downloading the metadata for your box
+==> default: to check for updates. This is not an error, since it is usually due
+==> default: to temporary network problems. This is just a warning. The problem
+==> default: encountered was:
+==> default:
+==> default: Failed to connect to atlas.hashicorp.com port 443: Timed out
+==> default:
+==> default: If you want to check for box updates, verify your network connectio                         n
+==> default: is valid and try again.
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 80 (guest) => 8083 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Remote connection disconnect. Retrying...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version o                         f
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you                          see
+    default: shared folder errors, please make sure the guest additions within t                         he
+    default: virtual machine match the version of VirtualBox you have installed                          on
+    default: your host and reload your VM.
+    default:
+    default: Guest Additions Version: 4.3.36
+    default: VirtualBox Version: 5.1
+==> default: Configuring and enabling network interfaces...
+==> default: Mounting shared folders...
+    default: /vagrant => C:/Users/kristhim/GitRepo/DevOps/vagrant/ubuntutest1
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--                         provision`
+==> default: flag to force provisioning. Provisioners marked to run always will                          still run.
+
+kristhim@KRISTHIM4 MINGW64 ~/GitRepo/DevOps/vagrant/ubuntutest1 (master)
+$ vagrant ssh
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-135-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 1.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+Last login: Tue Apr  3 09:32:26 2018 from 10.0.2.2
+vagrant@vagrant-ubuntu-trusty-64:~$ clear
+vagrant@vagrant-ubuntu-trusty-64:~$ su - hduser
+Password:
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ vi student.txt
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /
+Found 5 items
+drwxr-xr-x   - hduser supergroup          0 2018-04-02 14:10 /sqoop_test
+drwxr-xr-x   - hduser supergroup          0 2018-04-02 14:04 /sqooptest
+drwxrwxrwx   - hduser supergroup          0 2018-04-03 05:23 /tmp
+drwxr-xr-x   - hduser supergroup          0 2018-04-03 05:20 /user
+drwxr-xr-x   - hduser supergroup          0 2018-04-03 10:07 /usr
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -mkdir /gcp_test
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -cp student.txt /gcp_test
+cp: `student.txt': No such file or directory
+hduser@vagrant-ubuntu-trusty-64:~$ ls
+derby.log  metastore_db      software      student.txt
+hive       scala-2.10.4.tgz  sparktest.py  ${system:java.io.tmpdir}
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -put student.txt /gcp_test
+hduser@vagrant-ubuntu-trusty-64:~$ mv student.txt emp.txt
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /
+Found 6 items
+drwxr-xr-x   - hduser supergroup          0 2018-04-04 12:19 /gcp_test
+drwxr-xr-x   - hduser supergroup          0 2018-04-02 14:10 /sqoop_test
+drwxr-xr-x   - hduser supergroup          0 2018-04-02 14:04 /sqooptest
+drwxrwxrwx   - hduser supergroup          0 2018-04-03 05:23 /tmp
+drwxr-xr-x   - hduser supergroup          0 2018-04-03 05:20 /user
+drwxr-xr-x   - hduser supergroup          0 2018-04-03 10:07 /usr
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /gcp_test
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -put emp.txt /gcp_test
+hduser@vagrant-ubuntu-trusty-64:~$ cat emp.txt
+100,'thimma','hosur'
+200,'kumar','bangalore'
+300,'lakshmi','rayakottai'
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -put emp.txt /gcp_test
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -cat /gcp_test/emp.txt
+100,'thimma','hosur'
+200,'kumar','bangalore'
+300,'lakshmi','rayakottai'
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /gcp_test/emp.txt
+ls: `/gcp_test/emp.txt': No such file or directory
+hduser@vagrant-ubuntu-trusty-64:~$ vi student.txt
+hduser@vagrant-ubuntu-trusty-64:~$ vi student.txt
+hduser@vagrant-ubuntu-trusty-64:~$ vi student.txt
+hduser@vagrant-ubuntu-trusty-64:~$ vi student1.txt
+hduser@vagrant-ubuntu-trusty-64:~$ cat student1.txt
+1, 'gopal', 'TP', 2012
+2, 'kiran', 'HR', 2012
+3, 'kaleel','SC', 2013
+4, 'Prasanth', 'SC', 2013
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -put student1.txt /gcp_test/
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /gcp_test/
+Found 1 items
+-rw-r--r--   1 hduser supergroup         95 2018-04-04 12:45 /gcp_test/student1.txt
+hduser@vagrant-ubuntu-trusty-64:~$ cat student
+cat: student: No such file or directory
+hduser@vagrant-ubuntu-trusty-64:~$ cat student1.txt
+1, 'gopal', 'TP', 2012
+2, 'kiran', 'HR', 2012
+3, 'kaleel','SC', 2013
+4, 'Prasanth', 'SC', 2013
+hduser@vagrant-ubuntu-trusty-64:~$ cat student | tee grep "2013" > student2.txt
+cat: student: No such file or directory
+hduser@vagrant-ubuntu-trusty-64:~$ cat student |grep "2013" > student2.txt
+cat: student: No such file or directory
+hduser@vagrant-ubuntu-trusty-64:~$ ls
+2013       emp.txt  hive          scala-2.10.4.tgz  sparktest.py  student2.txt  ${system:java.io.tmpdir}
+derby.log  grep     metastore_db  software          student1.txt  student.txt
+hduser@vagrant-ubuntu-trusty-64:~$ cat student1.txt | tee grep "2013" > student2.txt
+hduser@vagrant-ubuntu-trusty-64:~$ cat student2.txt
+1, 'gopal', 'TP', 2012
+2, 'kiran', 'HR', 2012
+3, 'kaleel','SC', 2013
+4, 'Prasanth', 'SC', 2013
+hduser@vagrant-ubuntu-trusty-64:~$ cat student1.txt |grep "2013" > student2.txt
+hduser@vagrant-ubuntu-trusty-64:~$ cat student2.txt
+3, 'kaleel','SC', 2013
+4, 'Prasanth', 'SC', 2013
+hduser@vagrant-ubuntu-trusty-64:~$ vi student1.txt
+hduser@vagrant-ubuntu-trusty-64:~$ vi student1.txt
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /user/share/warehouse
+ls: `/user/share/warehouse': No such file or directory
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /user/share/
+ls: `/user/share/': No such file or directory
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /usr/share/
+ls: `/usr/share/': No such file or directory
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ ls
+2013       emp.txt  hive          scala-2.10.4.tgz  sparktest.py  student2.txt  ${system:java.io.tmpdir}
+derby.log  grep     metastore_db  software          student1.txt  student.txt
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /user
+Found 2 items
+drwxr-xr-x   - hduser supergroup          0 2018-04-02 14:01 /user/hduser
+drwxr-xr-x   - hduser supergroup          0 2018-04-03 05:20 /user/hive
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /user/hive
+Found 1 items
+drwxrwxr-x   - hduser supergroup          0 2018-04-03 05:20 /user/hive/warehouse
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /user/hive/warehouse
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /user/hive/warehouse/
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /usr/hive/warehouse/
+Found 3 items
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 13:20 /usr/hive/warehouse/part_example
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 12:08 /usr/hive/warehouse/student
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 12:44 /usr/hive/warehouse/testdb.db
+hduser@vagrant-ubuntu-trusty-64:~$ vi bucketing.example.hql
+hduser@vagrant-ubuntu-trusty-64:~$ cat bucketing.example.hql | tail
+DROP TABLE IF EXISTS bucketed_user;
+
+create table all_state(street string, city string,      zip int, state string,  beds int,       baths intsq__ft int,     type string, price string ) row format delimited fields terminated by ',' lines terminate by '\n' stored as textfile;
+
+load data local inpath '/home/hduser/real_state.csv' overwrite into table all_state;
+
+create table bucket_example(street string, city string, zip int, state string,  beds int,       baths intsq__ft int,     type string, price string )  partitioned by (state string) clustered by (street) sorted b (city) into 2 buckets row format delimited fields terminated by ',' lines terminated by '\n' stored as squencefile;
+
+insert overwrite table bucket_example partition(street) select street string, city string,      zip int, tate string,    beds int,       baths int,      sq__ft int,     type string, price string from all_state;
+
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLogerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/lf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j.properties Async: true
+OK
+Time taken: 3.27 seconds
+OK
+Time taken: 2.049 seconds
+FAILED: SemanticException Line 3:23 Invalid path ''/home/hduser/real_state.csv'': No files matching path ile:/home/hduser/real_state.csv
+hduser@vagrant-ubuntu-trusty-64:~$ cp /vagrant/real_state.csv .
+hduser@vagrant-ubuntu-trusty-64:~$ cat bucketing.example.hql | tail
+DROP TABLE IF EXISTS bucketed_user;
+
+create table all_state(street string, city string,      zip int, state string,  beds int,       baths intsq__ft int,     type string, price string ) row format delimited fields terminated by ',' lines terminate by '\n' stored as textfile;
+
+load data local inpath '/home/hduser/real_state.csv' overwrite into table all_state;
+
+create table bucket_example(street string, city string, zip int, state string,  beds int,       baths intsq__ft int,     type string, price string )  partitioned by (state string) clustered by (street) sorted b (city) into 2 buckets row format delimited fields terminated by ',' lines terminated by '\n' stored as squencefile;
+
+insert overwrite table bucket_example partition(street) select street string, city string,      zip int, tate string,    beds int,       baths int,      sq__ft int,     type string, price string from all_state;
+
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLogerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/lf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j.properties Async: true
+OK
+Time taken: 3.376 seconds
+OK
+Time taken: 2.34 seconds
+Loading data to table default.all_state
+OK
+Time taken: 3.335 seconds
+FAILED: SemanticException [Error 10035]: Column repeated in partitioning columns
+hduser@vagrant-ubuntu-trusty-64:~$ vi bucketing.example.hql
+hduser@vagrant-ubuntu-trusty-64:~$ cat bucketing.example.hql | tail
+DROP TABLE IF EXISTS bucketed_user;
+
+create table all_state(street string, city string,      zip int, state string,  beds int,       baths intsq__ft int,     type string, price string ) row format delimited fields terminated by ',' lines terminate by '\n' stored as textfile;
+
+load data local inpath '/home/hduser/real_state.csv' overwrite into table all_state;
+
+create table bucket_example(street string, city string, zip int, beds int,      baths int,      sq__ft in,       type string, price string )  partitioned by (state string) clustered by (street) sorted by (city)into 2 buckets row format delimited fields terminated by ',' lines terminated by '\n' stored as sequencefle;
+
+insert overwrite table bucket_example partition(street) select street string, city string,      zip int, tate string,    beds int,       baths int,      sq__ft int,     type string, price string from all_state;
+
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLogerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/lf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j.properties Async: true
+OK
+Time taken: 3.206 seconds
+OK
+Time taken: 2.112 seconds
+Loading data to table default.all_state
+OK
+Time taken: 2.455 seconds
+OK
+Time taken: 0.351 seconds
+FailedPredicateException(identifier,{useSQL11ReservedKeywordsForIdentifier()}?)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.identifier(HiveParser_Identifiersarser.java:11898)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.identifier(HiveParser.java:51813)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectItem(HiveParser_SelectClaueParser.java:2985)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectList(HiveParser_SelectClaueParser.java:1467)
+        at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectClause(HiveParser_SelectCluseParser.java:1194)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.selectClause(HiveParser.java:51850)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.selectStatement(HiveParser.java:45661)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.regularBody(HiveParser.java:45401)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.queryStatementExpressionBody(HiveParser.java:44584)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.queryStatementExpression(HiveParser.java:44454)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.execStatement(HiveParser.java:1696)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1178)
+        at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:204)
+        at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:166)
+        at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:444)
+        at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1242)
+        at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1384)
+        at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1171)
+        at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1161)
+        at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:232)
+        at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:183)
+        at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:399)
+        at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:335)
+        at org.apache.hadoop.hive.cli.CliDriver.processReader(CliDriver.java:429)
+        at org.apache.hadoop.hive.cli.CliDriver.processFile(CliDriver.java:445)
+        at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:748)
+        at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:714)
+        at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:641)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+FAILED: ParseException line 3:95 Failed to recognize predicate 'int'. Failed rule: 'identifier' in selecton target
+hduser@vagrant-ubuntu-trusty-64:~$ rm bucketing.example.hql
+hduser@vagrant-ubuntu-trusty-64:~$ vi bucketing.example.hql
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ cat bucketing.example.hql | tail
+
+create table all_state(street string, city string,      zip int, state string,  beds int,       baths intsq__ft int,     type string, price string ) row format delimited fields terminated by ',' lines terminate by '\n' stored as textfile;
+
+load data local inpath '/home/hduser/real_state.csv' overwrite into table all_state;
+
+create table bucket_example(street string, city string, zip int, beds int,      baths int,      sq__ft in,       type string, price string )  partitioned by (state string) clustered by (street) sorted by (city)into 2 buckets row format delimited fields terminated by ',' lines terminated by '\n' stored as sequencefle;
+
+insert overwrite table bucket_example partition(street) select street, city, zip, state, beds, baths, sq_ft, type, price from all_state;
+
+
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+^Chduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLogerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/lf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j.properties Async: true
+OK
+Time taken: 4.172 seconds
+OK
+Time taken: 2.455 seconds
+Loading data to table default.all_state
+OK
+Time taken: 2.526 seconds
+OK
+Time taken: 0.4 seconds
+FAILED: ValidationFailureSemanticException Partition spec {street=null} contains non-partition columns
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ rm bucketing.example.hql
+hduser@vagrant-ubuntu-trusty-64:~$ vi bucketing.example.hql
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 4.555 seconds
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. AlreadyExistsException(message:Table all_state already exists)
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 3.318 seconds
+OK
+Time taken: 2.143 seconds
+Loading data to table default.all_state
+OK
+Time taken: 2.561 seconds
+OK
+Time taken: 0.359 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
+Query ID = hduser_20180404141329_56b08a30-d44f-420b-988c-290aed185c03
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 2
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1522838529427_0001, Tracking URL = http://vagrant-ubuntu-trusty-64:8088/proxy/application_1522838529427_0001/
+Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1522838529427_0001
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 2
+2018-04-04 14:14:24,255 Stage-1 map = 0%,  reduce = 0%
+2018-04-04 14:14:53,967 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 5.39 sec
+2018-04-04 14:15:43,144 Stage-1 map = 100%,  reduce = 67%, Cumulative CPU 9.21 sec
+2018-04-04 14:15:58,676 Stage-1 map = 100%,  reduce = 71%, Cumulative CPU 14.87 sec
+2018-04-04 14:16:03,026 Stage-1 map = 100%,  reduce = 78%, Cumulative CPU 22.23 sec
+2018-04-04 14:16:05,884 Stage-1 map = 100%,  reduce = 84%, Cumulative CPU 23.95 sec
+2018-04-04 14:16:10,565 Stage-1 map = 100%,  reduce = 85%, Cumulative CPU 25.63 sec
+2018-04-04 14:16:16,964 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 29.5 sec
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00007fc3d68a0000, 12288, 0) failed; error='Cannot allocate memory' (errno=12)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 12288 bytes for committing reserved memory.
+# An error report file with more information is saved as:
+# /home/hduser/hs_err_pid8783.log
+hduser@vagrant-ubuntu-trusty-64:~$ cp /vagrant/real_state.csv .
+hduser@vagrant-ubuntu-trusty-64:~$ ls
+2013                   grep                real_state.csv    student1.txt
+bucketing.example.hql  hive                scala-2.10.4.tgz  student2.txt
+derby.log              hs_err_pid8783.log  software          student.txt
+emp.txt                metastore_db        sparktest.py      ${system:java.io.tmpdir}
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+^C
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 5.15 seconds
+OK
+Time taken: 3.016 seconds
+Loading data to table default.all_state
+Failed with exception Unable to move source file:/home/hduser/real_state.csv to destination hdfs://localhost:9000/usr/hive/warehouse/all_state/real_state.csv
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveTask. Unable to move source file:/home/hduser/real_state.csv to destination hdfs://localhost:9000/usr/hive/warehouse/all_state/real_state.csv
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /usr/hive/warehouse
+Found 4 items
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 14:20 /usr/hive/warehouse/all_state
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 13:20 /usr/hive/warehouse/part_example
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 12:08 /usr/hive/warehouse/student
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 12:44 /usr/hive/warehouse/testdb.db
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -rm -r /usr/hive/warehouse/all_state
+18/04/04 14:22:14 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /usr/hive/warehouse/all_state
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 3.835 seconds
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. AlreadyExistsException(message:Table all_state already exists)
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 3.273 seconds
+OK
+Time taken: 2.071 seconds
+Loading data to table default.all_state
+Failed with exception Unable to move source file:/home/hduser/real_state.csv to destination hdfs://localhost:9000/usr/hive/warehouse/all_state/real_state.csv
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveTask. Unable to move source file:/home/hduser/real_state.csv to destination hdfs://localhost:9000/usr/hive/warehouse/all_state/real_state.csv
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /usr/hive/warehouse
+Found 4 items
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 14:25 /usr/hive/warehouse/all_state
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 13:20 /usr/hive/warehouse/part_example
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 12:08 /usr/hive/warehouse/student
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 12:44 /usr/hive/warehouse/testdb.db
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -rm -r /usr/hive/warehouse/all_state
+rm: `/usr/hive/warehouse/all_state': No such file or directory
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /usr/hive/warehouse
+Found 3 items
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 13:20 /usr/hive/warehouse/part_example
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 12:08 /usr/hive/warehouse/student
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 12:44 /usr/hive/warehouse/testdb.db
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 9.968 seconds
+OK
+Time taken: 3.923 seconds
+Loading data to table default.all_state
+Failed with exception Unable to move source file:/home/hduser/real_state.csv to destination hdfs://localhost:9000/usr/hive/warehouse/all_state/real_state.csv
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveTask. Unable to move source file:/home/hduser/real_state.csv to destination hdfs://localhost:9000/usr/hive/warehouse/all_state/real_state.csv
+hduser@vagrant-ubuntu-trusty-64:~$ hive -e drop table all_state;
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+NoViableAltException(-1@[772:1: ddlStatement : ( createDatabaseStatement | switchDatabaseStatement | dropDatabaseStatement | createTableStatement | dropTableStatement | truncateTableStatement | alterStatement | descStatement | showStatement | metastoreCheck | createViewStatement | dropViewStatement | createFunctionStatement | createMacroStatement | createIndexStatement | dropIndexStatement | dropFunctionStatement | reloadFunctionStatement | dropMacroStatement | analyzeStatement | lockStatement | unlockStatement | lockDatabase | unlockDatabase | createRoleStatement | dropRoleStatement | ( grantPrivileges )=> grantPrivileges | ( revokePrivileges )=> revokePrivileges | showGrants | showRoleGrants | showRolePrincipals | showRoles | grantRole | revokeRole | setRole | showCurrentRole | abortTransactionStatement );])
+        at org.antlr.runtime.DFA.noViableAlt(DFA.java:158)
+        at org.antlr.runtime.DFA.predict(DFA.java:144)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.ddlStatement(HiveParser.java:2709)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.execStatement(HiveParser.java:1756)
+        at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1178)
+        at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:204)
+        at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:166)
+        at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:444)
+        at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1242)
+        at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1384)
+        at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1171)
+        at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1161)
+        at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:232)
+        at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:183)
+        at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:399)
+        at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:335)
+        at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:742)
+        at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:714)
+        at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:641)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+FAILED: ParseException line 1:4 cannot recognize input near 'drop' '<EOF>' '<EOF>' in ddl statement
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /usr/hive/warehouse
+Found 4 items
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 14:28 /usr/hive/warehouse/all_state
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 13:20 /usr/hive/warehouse/part_example
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 12:08 /usr/hive/warehouse/student
+drwxrwxr-x   - hduser supergroup          0 2018-04-04 12:44 /usr/hive/warehouse/testdb.db
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -rm -r /usr/hive/warehouse/all_state
+18/04/04 14:32:53 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /usr/hive/warehouse/all_state
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+^C
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+^C
+hduser@vagrant-ubuntu-trusty-64:~$ hive -e 'select * from student'
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 10.835 seconds
+hduser@vagrant-ubuntu-trusty-64:~$ hive -e 'drop table all_state'
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 11.046 seconds
+hduser@vagrant-ubuntu-trusty-64:~$ hive -e 'drop table bucket_example'
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 5.406 seconds
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 4.747 seconds
+OK
+Time taken: 2.351 seconds
+Loading data to table default.all_state
+Failed with exception Unable to move source file:/home/hduser/real_state.csv to destination hdfs://localhost:9000/usr/hive/warehouse/all_state/real_state.csv
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveTask. Unable to move source file:/home/hduser/real_state.csv to destination hdfs://localhost:9000/usr/hive/warehouse/all_state/real_state.csv
+hduser@vagrant-ubuntu-trusty-64:~$ ls -lr
+total 29408
+drwxr-xr-x 3 hduser hadoop     4096 Apr  3 09:43 ${system:java.io.tmpdir}
+-rw-r--r-- 1 hduser hadoop       59 Apr  4 12:33 student.txt
+-rw-r--r-- 1 hduser hadoop       49 Apr  4 13:18 student2.txt
+-rw-r--r-- 1 hduser hadoop       46 Apr  4 13:19 student1.txt
+-rw-r--r-- 1 hduser hadoop      133 Apr  4 10:50 sparktest.py
+drwxr-xr-x 4 hduser hadoop     4096 Apr  3 15:42 software
+-rwxr-xr-x 1 hduser hadoop 29937534 Apr  3 14:14 scala-2.10.4.tgz
+-rwxr-xr-x 1 hduser hadoop     6524 Apr  4 14:19 real_state.csv
+drwxr-xr-x 5 hduser hadoop     4096 Apr  3 10:24 metastore_db
+-rw-r--r-- 1 hduser hadoop    95180 Apr  4 14:16 hs_err_pid8783.log
+drwxr-xr-x 3 hduser hadoop     4096 Apr  3 09:43 hive
+-rw-r--r-- 1 hduser hadoop       95 Apr  4 13:18 grep
+-rw-r--r-- 1 hduser hadoop       72 Apr  4 12:12 emp.txt
+-rw-r--r-- 1 hduser hadoop    12401 Apr  4 14:38 emp.java
+-rw-r--r-- 1 hduser hadoop      630 Apr  3 09:43 derby.log
+-rw-r--r-- 1 hduser hadoop      970 Apr  4 14:11 bucketing.example.hql
+-rw-r--r-- 1 hduser hadoop       95 Apr  4 13:18 2013
+-rw-r--r-- 1 hduser hadoop        0 Apr  4 14:43 -
+hduser@vagrant-ubuntu-trusty-64:~$ cat real_state.csv
+street,city,zip,state,beds,baths,sq__ft,type,price
+3526 HIGH ST,SACRAMENTO,95838,CA,2,1,836,Residential,59222
+51 OMAHA CT,SACRAMENTO,95823,CA,3,1,1167,Residential,68212
+2796 BRANCH ST,SACRAMENTO,95815,CA,2,1,796,Residential,68880
+2805 JANETTE WAY,SACRAMENTO,95815,CA,2,1,852,Residential,69307
+6001 MCMAHON DR,SACRAMENTO,95824,CA,2,1,797,Residential,81900
+5828 PEPPERMILL CT,SACRAMENTO,95841,CA,3,1,1122,Condo,89921
+6048 OGDEN NASH WAY,SACRAMENTO,95842,CA,3,2,1104,Residential,90895
+2561 19TH AVE,SACRAMENTO,95820,CA,3,1,1177,Residential,91002
+11150 TRINITY RIVER DR Unit 114,RANCHO CORDOVA,95670,CA,2,2,941,Condo,94905
+7325 10TH ST,RIO LINDA,95673,CA,3,2,1146,Residential,98937
+645 MORRISON AVE,SACRAMENTO,95838,CA,3,2,909,Residential,100309
+4085 FAWN CIR,SACRAMENTO,95823,CA,3,2,1289,Residential,106250
+2930 LA ROSA RD,SACRAMENTO,95815,CA,1,1,871,Residential,106852
+2113 KIRK WAY,SACRAMENTO,95822,CA,3,1,1020,Residential,107502
+4533 LOCH HAVEN WAY,SACRAMENTO,95842,CA,2,2,1022,Residential,108750
+7340 HAMDEN PL,SACRAMENTO,95842,CA,2,2,1134,Condo,110700
+6715 6TH ST,RIO LINDA,95673,CA,2,1,844,Residential,113263
+6236 LONGFORD DR Unit 1,CITRUS HEIGHTS,95621,CA,2,1,795,Condo,116250
+250 PERALTA AVE,SACRAMENTO,95833,CA,2,1,588,Residential,120000
+113 LEEWILL AVE,RIO LINDA,95673,CA,3,2,1356,Residential,121630
+6118 STONEHAND AVE,CITRUS HEIGHTS,95621,CA,3,2,1118,Residential,122000
+4882 BANDALIN WAY,SACRAMENTO,95823,CA,4,2,1329,Residential,122682
+7511 OAKVALE CT,NORTH HIGHLANDS,95660,CA,4,2,1240,Residential,123000
+9 PASTURE CT,SACRAMENTO,95834,CA,3,2,1601,Residential,124100
+3729 BAINBRIDGE DR,NORTH HIGHLANDS,95660,CA,3,2,901,Residential,125000
+3828 BLACKFOOT WAY,ANTELOPE,95843,CA,3,2,1088,Residential,126640
+4108 NORTON WAY,SACRAMENTO,95820,CA,3,1,963,Residential,127281
+1469 JANRICK AVE,SACRAMENTO,95832,CA,3,2,1119,Residential,129000
+9861 CULP WAY,SACRAMENTO,95827,CA,4,2,1380,Residential,131200
+7825 CREEK VALLEY CIR,SACRAMENTO,95828,CA,3,2,1248,Residential,132000
+5201 LAGUNA OAKS DR Unit 140,ELK GROVE,95758,CA,2,2,1039,Condo,133000
+6768 MEDORA DR,NORTH HIGHLANDS,95660,CA,3,2,1152,Residential,134555
+3100 EXPLORER DR,SACRAMENTO,95827,CA,3,2,1380,Residential,136500
+7944 DOMINION WAY,ELVERTA,95626,CA,3,2,1116,Residential,138750
+5201 LAGUNA OAKS DR Unit 162,ELK GROVE,95758,CA,2,2,1039,Condo,141000
+3920 SHINING STAR DR,SACRAMENTO,95823,CA,3,2,1418,Residential,146250
+5031 CORVAIR ST,NORTH HIGHLANDS,95660,CA,3,2,1082,Residential,147308
+7661 NIXOS WAY,SACRAMENTO,95823,CA,4,2,1472,Residential,148750
+7044 CARTHY WAY,SACRAMENTO,95828,CA,4,2,1146,Residential,149593
+2442 LARKSPUR LN,SACRAMENTO,95825,CA,1,1,760,Condo,150000
+4800 WESTLAKE PKWY Unit 2109,SACRAMENTO,95835,CA,2,2,1304,Condo,152000
+2178 63RD AVE,SACRAMENTO,95822,CA,3,2,1207,Residential,154000
+8718 ELK WAY,ELK GROVE,95624,CA,3,2,1056,Residential,156896
+5708 RIDGEPOINT DR,ANTELOPE,95843,CA,2,2,1043,Residential,161250
+7315 KOALA CT,NORTH HIGHLANDS,95660,CA,4,2,1587,Residential,161500
+2622 ERIN DR,SACRAMENTO,95833,CA,4,1,1120,Residential,164000
+8421 SUNBLAZE WAY,SACRAMENTO,95823,CA,4,2,1580,Residential,165000
+7420 ALIX PKWY,SACRAMENTO,95823,CA,4,1,1955,Residential,166357
+3820 NATOMA WAY,SACRAMENTO,95838,CA,4,2,1656,Residential,166357
+4431 GREEN TREE DR,SACRAMENTO,95823,CA,3,2,1477,Residential,168000
+9417 SARA ST,ELK GROVE,95624,CA,3,2,1188,Residential,170000
+8299 HALBRITE WAY,SACRAMENTO,95828,CA,4,2,1590,Residential,173000
+7223 KALLIE KAY LN,SACRAMENTO,95823,CA,3,2,1463,Residential,174250
+8156 STEINBECK WAY,SACRAMENTO,95828,CA,4,2,1714,Residential,174313
+7957 VALLEY GREEN DR,SACRAMENTO,95823,CA,3,2,1185,Residential,178480
+1122 WILD POPPY CT,GALT,95632,CA,3,2,1406,Residential,178760
+4520 BOMARK WAY,SACRAMENTO,95842,CA,4,2,1943,Multi-Family,179580
+9012 KIEFER BLVD,SACRAMENTO,95826,CA,3,2,1172,Residential,181000
+5332 SANDSTONE ST,CARMICHAEL,95608,CA,3,1,1152,Residential,181872
+5993 SAWYER CIR,SACRAMENTO,95823,CA,4,3,1851,Residential,182587
+4844 CLYDEBANK WAY,ANTELOPE,95843,CA,3,2,1215,Residential,182716
+306 CAMELLIA WAY,GALT,95632,CA,3,2,1130,Residential,182750
+9021 MADISON AVE,ORANGEVALE,95662,CA,4,2,1603,Residential,183200
+404 6TH ST,GALT,95632,CA,3,1,1479,Residential,188741
+8317 SUNNY CREEK WAY,SACRAMENTO,95823,CA,3,2,1420,Residential,189000
+2617 BASS CT,SACRAMENTO,95826,CA,3,2,1280,Residential,192067
+7005 TIANT WAY,ELK GROVE,95758,CA,3,2,1586,Residential,194000
+7895 CABER WAY,ANTELOPE,95843,CA,3,2,1362,Residential,194818
+7624 BOGEY CT,SACRAMENTO,95828,CA,4,4,2162,Multi-Family,195000
+6930 HAMPTON COVE WAY,SACRAMENTO,95823,CA,3,2,1266,Residential,198000
+8708 MESA BROOK WAY,ELK GROVE,95624,CA,4,2,1715,Residential,199500
+120 GRANT LN,FOLSOM,95630,CA,3,2,1820,Residential,200000
+5907 ELLERSLEE DR,CARMICHAEL,95608,CA,3,1,936,Residential,200000
+17 SERASPI CT,SACRAMENTO,95834,CA,0,0,0,Residential,206000
+170 PENHOW CIR,SACRAMENTO,95834,CA,3,2,1511,Residential,208000
+8345 STAR THISTLE WAY,SACRAMENTO,95823,CA,4,2,1590,Residential,212864
+9080 FRESCA WAY,ELK GROVE,95758,CA,4,2,1596,Residential,221000
+391 NATALINO CIR,SACRAMENTO,95835,CA,2,2,1341,Residential,221000
+8373 BLACKMAN WAY,ELK GROVE,95624,CA,5,3,2136,Residential,223058
+9837 CORTE DORADO CT,ELK GROVE,95624,CA,4,2,1616,Residential,227887
+5037 J PKWY,SACRAMENTO,95823,CA,3,2,1478,Residential,231477
+10245 LOS PALOS DR,RANCHO CORDOVA,95670,CA,3,2,1287,Residential,234697
+6613 NAVION DR,CITRUS HEIGHTS,95621,CA,4,2,1277,Residential,235000
+2887 AZEVEDO DR,SACRAMENTO,95833,CA,4,2,1448,Residential,236000
+9186 KINBRACE CT,SACRAMENTO,95829,CA,4,3,2235,Residential,236685
+4243 MIDDLEBURY WAY,MATHER,95655,CA,3,2,2093,Residential,237800
+1028 FALLON PLACE CT,RIO LINDA,95673,CA,3,2,1193,Residential,240122
+4804 NORIKER DR,ELK GROVE,95757,CA,3,2,2163,Residential,242638
+7713 HARVEST WOODS DR,SACRAMENTO,95828,CA,3,2,1269,Residential,244000
+2866 KARITSA AVE,SACRAMENTO,95833,CA,0,0,0,Residential,244500
+6913 RICHEVE WAY,SACRAMENTO,95828,CA,3,1,958,Residential,244960
+8636 TEGEA WAY,ELK GROVE,95624,CA,5,3,2508,Residential,245918
+5448 MAIDSTONE WAY,CITRUS HEIGHTS,95621,CA,3,2,1305,Residential,250000
+18 OLLIE CT,ELK GROVE,95758,CA,4,2,1591,Residential,250000
+4010 ALEX LN,CARMICHAEL,95608,CA,2,2,1326,Condo,250134
+4901 MILLNER WAY,ELK GROVE,95757,CA,3,2,1843,Residential,254200
+4818 BRITTNEY LEE CT,SACRAMENTO,95841,CA,4,2,1921,Residential,254200
+5529 LAGUNA PARK DR,ELK GROVE,95758,CA,5,3,2790,Residential,258000
+230 CANDELA CIR,SACRAMENTO,95835,CA,3,2,1541,Residential,260000
+hduser@vagrant-ubuntu-trusty-64:~$ cat real_state.csv | wc
+    100     359    6524
+hduser@vagrant-ubuntu-trusty-64:~$ clear
+hduser@vagrant-ubuntu-trusty-64:~$ ls
+-                      emp.java  hs_err_pid8783.log  software      student.txt
+2013                   emp.txt   metastore_db        sparktest.py  ${system:java.io.tmpdir}
+bucketing.example.hql  grep      real_state.csv      student1.txt
+derby.log              hive      scala-2.10.4.tgz    student2.txt
+hduser@vagrant-ubuntu-trusty-64:~$ ls -la
+total 29496
+-rw-r--r--  1 hduser hadoop        0 Apr  4 14:43 -
+drwxr-xr-x 12 hduser hadoop     4096 Apr  4 14:43 .
+drwxr-xr-x  6 root   root       4096 Apr  2 12:43 ..
+-rw-r--r--  1 hduser hadoop       95 Apr  4 13:18 2013
+-rw-------  1 hduser hadoop     6692 Apr  3 17:03 .bash_history
+-rw-r--r--  1 hduser hadoop      220 Apr  2 12:43 .bash_logout
+-rw-r--r--  1 hduser hadoop     4570 Apr  4 11:03 .bashrc
+drwxr-xr-x  2 hduser hadoop     4096 Apr  3 05:22 .beeline
+-rw-r--r--  1 hduser hadoop      970 Apr  4 14:11 bucketing.example.hql
+drwx------  2 hduser hadoop     4096 Apr  2 12:52 .cache
+-rw-r--r--  1 hduser hadoop      630 Apr  3 09:43 derby.log
+-rw-r--r--  1 hduser hadoop    12401 Apr  4 14:38 emp.java
+-rw-r--r--  1 hduser hadoop       72 Apr  4 12:12 emp.txt
+-rw-r--r--  1 hduser hadoop       95 Apr  4 13:18 grep
+drwxr-xr-x  3 hduser hadoop     4096 Apr  3 09:43 hive
+-rw-r--r--  1 hduser hadoop     6857 Apr  4 14:26 .hivehistory
+-rw-r--r--  1 hduser hadoop    95180 Apr  4 14:16 hs_err_pid8783.log
+drwxr-xr-x  3 hduser hadoop     4096 Apr  4 10:57 .ipython
+drwxr-xr-x  5 hduser hadoop     4096 Apr  3 10:24 metastore_db
+-rw-------  1 hduser hadoop      512 Apr  4 14:32 .mysql_history
+drwxr-xr-x  2 hduser hadoop     4096 Apr  2 13:20 .oracle_jre_usage
+drwxr-xr-x  2 root   root       4096 Apr  4 10:46 .pip
+-rw-r--r--  1 hduser hadoop      675 Apr  2 12:43 .profile
+-rwxr-xr-x  1 hduser hadoop     6524 Apr  4 14:19 real_state.csv
+-rwxr-xr-x  1 hduser hadoop 29937534 Apr  3 14:14 scala-2.10.4.tgz
+-rw-r--r--  1 hduser hadoop       27 Apr  3 15:48 .scala_history
+drwxr-xr-x  4 hduser hadoop     4096 Apr  3 15:42 software
+-rw-r--r--  1 hduser hadoop      133 Apr  4 10:50 sparktest.py
+drwx------  2 hduser hadoop     4096 Apr  2 12:52 .ssh
+-rw-r--r--  1 hduser hadoop       46 Apr  4 13:19 student1.txt
+-rw-r--r--  1 hduser hadoop       49 Apr  4 13:18 student2.txt
+-rw-r--r--  1 hduser hadoop       59 Apr  4 12:33 student.txt
+drwxr-xr-x  3 hduser hadoop     4096 Apr  3 09:43 ${system:java.io.tmpdir}
+-rw-------  1 hduser hadoop    15893 Apr  4 14:11 .viminfo
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls -l /usr/hive/warehouse/all_state
+-ls: Illegal option -l
+Usage: hadoop fs [generic options] -ls [-d] [-h] [-R] [<path> ...]
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -ls /usr/hive/warehouse/all_state
+Found 1 items
+-rw-r--r--   1 hduser supergroup          0 2018-04-04 14:42 /usr/hive/warehouse/all_state/real_state.csv
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -rm /usr/hive/warehouse/all_state/real_state.csv
+18/04/04 14:47:57 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /usr/hive/warehouse/all_state/real_state.csv
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -rm -r /usr/hive/warehouse/all_state
+18/04/04 14:48:19 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /usr/hive/warehouse/all_state
+hduser@vagrant-ubuntu-trusty-64:~$ hive -e 'drop table all_state'
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 11.69 seconds
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 4.054 seconds
+OK
+Time taken: 2.963 seconds
+Loading data to table default.all_state
+Failed with exception Unable to move source file:/home/hduser/real_state.csv to destination hdfs://localhost:9000/usr/hive/warehouse/all_state/real_state.csv
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveTask. Unable to move source file:/home/hduser/real_state.csv to destination hdfs://localhost:9000/usr/hive/warehouse/all_state/real_state.csv
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -chmod g+w /usr/hive/warehouse
+hduser@vagrant-ubuntu-trusty-64:~$ hadoop fs -chown -R hduser /usr/hive/warehouse
+hduser@vagrant-ubuntu-trusty-64:~$ hive -f bucketing.example.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 3.542 seconds
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. AlreadyExistsException(message:Table all_state already exists)
+hduser@vagrant-ubuntu-trusty-64:~$ hive -e 'drop table all_state'
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 11.06 seconds
+hduser@vagrant-ubuntu-trusty-64:~$ stop-all.sh
+This script is Deprecated. Instead use stop-dfs.sh and stop-yarn.sh
+Stopping namenodes on [localhost]
+localhost: stopping namenode
+localhost: no datanode to stop
+Stopping secondary namenodes [0.0.0.0]
+0.0.0.0: stopping secondarynamenode
+stopping yarn daemons
+stopping resourcemanager
+localhost: stopping nodemanager
+localhost: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+no proxyserver to stop
+hduser@vagrant-ubuntu-trusty-64:~$ start-all.sh
+This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh
+Starting namenodes on [localhost]
+localhost: starting namenode, logging to /usr/local/hadoop/logs/hadoop-hduser-namenode-vagrant-ubuntu-trusty-64.out
+localhost: starting datanode, logging to /usr/local/hadoop/logs/hadoop-hduser-datanode-vagrant-ubuntu-trusty-64.out
+Starting secondary namenodes [0.0.0.0]
+0.0.0.0: starting secondarynamenode, logging to /usr/local/hadoop/logs/hadoop-hduser-secondarynamenode-vagrant-ubuntu-trusty-64.out
+starting yarn daemons
+starting resourcemanager, logging to /usr/local/hadoop/logs/yarn-hduser-resourcemanager-vagrant-ubuntu-trusty-64.out
+localhost: starting nodemanager, logging to /usr/local/hadoop/logs/yarn-hduser-nodemanager-vagrant-ubuntu-trusty-64.out
+hduser@vagrant-ubuntu-trusty-64:~$ hdfs dfsadmin -report
+Configured Capacity: 42241163264 (39.34 GB)
+Present Capacity: 36100563530 (33.62 GB)
+DFS Remaining: 36066369536 (33.59 GB)
+DFS Used: 34193994 (32.61 MB)
+DFS Used%: 0.09%
+Under replicated blocks: 2
+Blocks with corrupt replicas: 0
+Missing blocks: 0
+
+-------------------------------------------------
+Live datanodes (1):
+
+Name: 127.0.0.1:50010 (localhost)
+Hostname: vagrant-ubuntu-trusty-64
+Decommission Status : Normal
+Configured Capacity: 42241163264 (39.34 GB)
+DFS Used: 34193994 (32.61 MB)
+Non DFS Used: 6140599734 (5.72 GB)
+DFS Remaining: 36066369536 (33.59 GB)
+DFS Used%: 0.08%
+DFS Remaining%: 85.38%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 1
+Last contact: Wed Apr 04 15:15:11 UTC 2018
+
+
+hduser@vagrant-ubuntu-trusty-64:~$

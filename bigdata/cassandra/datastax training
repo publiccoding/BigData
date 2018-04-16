@@ -1,0 +1,34 @@
+first valud in the primary key is partition key following cluster key 
+ex: primary key((state),id)
+
+
+setup Python API
+================
+from cassandra.cluster import Cluster 
+cluster = Cluster()
+session = cluster.connect('killervideo')
+session.execute(""" insert into users (userid , created_date) values() """)
+
+result = session.execute("select * from emep")[0]
+print(result.firstname,result.address)
+
+-> Cassandra is clustering system 
+-> data will be shared based on the availibility in the nodes using coordinator node and acknowledgement will be sent to them
+-> -2(63) to 2(63)-1 
+-> partitioner will help to store the data even and random distributed manner  
+->last write wins(LWW) resolution protocol for Cassandra write operation on stable 
+-> summary index in RAM is the begining index it will work with partition index in HDD will work togather to get the data from SStable (if it is large)
+-> Key cache is the fastest store the partition index cache data 
+-> blume filter will ask a question with two answer absoute yes or no maybe 
+-> compaction is houskeeping your disk ( cleand disk)
+-> nodetools # will be used for checkt Cassandra cluster information and status 
+-> Cassandra-stress write n=50000 -rate thread=4 # test Cassandra stress for read and write operation 
+-> with help of ccm you can create environemt and execute nodetool command for each node (ccm create -v 2.1.5 -n 3 mycluster ), ccm node1 cqlsh/nodetool 
+-> counter column could not be primary 
+-> if you add one clustering column in with clustering oder by then you must add all the clustering column
+
+copy videos from 'videos.csv' with header=true;
+create table <table_name>(
+    actor text,
+    primary key((actor),added_date)
+) with clustering ordery by ();

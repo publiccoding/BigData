@@ -1,0 +1,59 @@
+What does UNION do? What is the difference between UNION and UNION ALL?
+
+UNION merges the contents of two structurally-compatible tables into a single combined table. The difference between UNION and UNION ALL is that UNION will omit duplicate records whereas UNION ALL will include duplicate records.
+It is important to note that the performance of UNION ALL will typically be better than UNION, since UNION requires the server to do the additional work of removing any duplicates. So, in cases where is is certain that there will not be any duplicates, or where having duplicates is not a problem, use of UNION ALL would be recommended for performance reasons.
+
+List and explain the different types of JOIN clauses supported in ANSI-standard SQL.
+
+INNER JOIN (a.k.a. “simple join”): Returns all rows for which there is at least one match in BOTH tables. This is the default type of join if no specific JOIN type is specified.
+LEFT JOIN (or LEFT OUTER JOIN): Returns all rows from the left table, and the matched rows from the right table; i.e., the results will contain all records from the left table, even if the JOIN condition doesn’t find any matching records in the right table. This means that if the ON clause doesn’t match any records in the right table, the JOIN will still return a row in the result for that record in the left table, but with NULL in each column from the right table.
+RIGHT JOIN (or RIGHT OUTER JOIN): Returns all rows from the right table, and the matched rows from the left table. This is the exact opposite of a LEFT JOIN; i.e., the results will contain all records from the right table, even if the JOIN condition doesn’t find any matching records in the left table. This means that if the ON clause doesn’t match any records in the left table, the JOIN will still return a row in the result for that record in the right table, but with NULL in each column from the left table.
+FULL JOIN (or FULL OUTER JOIN): Returns all rows for which there is a match in EITHER of the tables. Conceptually, a FULL JOIN combines the effect of applying both a LEFT JOIN and a RIGHT JOIN; i.e., its result set is equivalent to performing a UNION of the results of left and right outer queries.
+CROSS JOIN: Returns all records where each row from the first table is combined with each row from the second table (i.e., returns the Cartesian product of the sets of rows from the joined tables). Note that a CROSS JOIN can either be specified using the CROSS JOIN syntax (“explicit join notation”) or (b) listing the tables in the FROM clause separated by commas without using a WHERE clause to supply join criteria (“implicit join notation”).
+
+Can we write a distributed query and get some data which is located on other server and on Oracle Database ?
+SQL Server can be lined to any server provided it has OLE-DB provider from Microsoft to allow a link.
+E.g. Oracle has a OLE-DB provider for oracle that Microsoft provides to add it as linked server to SQL Server group.
+If we drop a table, does it also drop related objects like constraints, indexes, columns, defaults, Views and Stored Procedures ?
+YES, SQL Server drops all related objects, which exists inside a table like, constraints, indexes, columns, defaults etc. BUT dropping a table will not drop Views and Stored Procedures as they exists outside the table.
+
+SELECT select_list
+[INTO new_table_]
+FROM table_source
+[WHERE search_condition]
+[GROUP BY group_by__expression]
+[HAVING search_condition]
+[ORDER BY order__expression [ASC | DESC] ]
+
+
+What are different Types of Join?
+Cross Join A cross join that does not have a WHERE clause produces the Cartesian product of the tables involved in the join. The size of a Cartesian product result set is the number of rows in the first table multiplied by the number of rows in the second table. The common example is when company wants to combine each product with a pricing table to analyze each product at each price.
+Inner Join A join that displays only the rows that have a match in both joined tables is known as inner Join. This is the default type of join in the Query and View Designer.
+Outer Join A join that includes rows even if they do not have related rows in the joined table is an Outer Join. You can create three different outer join to specify the unmatched rows to be included:
+Left Outer Join: In Left Outer Join all rows in the first-named table i.e. "left" table, which appears leftmost in the JOIN clause are included. Unmatched rows in the right table do not appear.
+Right Outer Join: In Right Outer Join all rows in the second-named table i.e. "right" table, which appears rightmost in the JOIN clause are included. Unmatched rows in the left table are not included.
+Full Outer Join: In Full Outer Join all rows in all joined tables are included, whether they are matched or not.
+Self Join This is a particular case when one table joins to itself, with one or two aliases to avoid confusion. A self join can be of any type, as long as the joined tables are the same. A self join is rather unique in that it involves a relationship with only one table. The common example is when company has a hierarchal reporting structure whereby one member of staff reports to another. Self Join can be Outer Join or Inner Join.
+
+What is lock escalation ?
+A query first takes the lowest level lock possible with the smallest footprint (row-level). When too many rows are locked (requiring too much RAM) the lock is escalated to a range or page lock. If too many pages  are locked, it may escalate to a table lock.
+
+What is an execution plan? How would you view the execution plan?
+An execution plan is basically a road map that graphically or textually shows the data retrieval methods chosen by the SQL Server query optimizer for a stored procedure or ad-hoc query and is a very useful tool for a developer to understand the performance characteristics of a query or stored procedure since  the plan is the one that SQL Server will place in its cache and use to execute the stored procedure or query. From within Query Analyzer is an option called "Show Execution Plan" (located on the Query  drop-down menu). If this option is turned on it will display query execution plan in separate window  when query is ran again
+
+Oracle SQL enables you to create and manipulate many other types of schema objects, including the following:
+
+Indexes
+Indexes are schema objects that contains an entry for each indexed row of the table or table cluster and provide direct, fast access to rows. Oracle Database supports several types of index. An index-organized table is a table in which the data is stored in an index structure. See Chapter 3, "Indexes and Index-Organized Tables".
+Partitions
+Partitions are pieces of large tables and indexes. Each partition has its own name and may optionally have its own storage characteristics. See "Overview of Partitions".
+Views
+Views are customized presentations of data in one or more tables or other views. You can think of them as stored queries. Views do not actually contain data. See "Overview of Views".
+Sequences
+A sequence is a user-created object that can be shared by multiple users to generate integers. Typically, sequences are used to generate primary key values. See "Overview of Sequences".
+Dimensions
+A dimension defines a parent-child relationship between pairs of column sets, where all the columns of a column set must come from the same table. Dimensions are commonly used to categorize data such as customers, products, and time. See "Overview of Dimensions".
+Synonyms
+A synonym is an alias for another schema object. Because a synonym is simply an alias, it requires no storage other than its definition in the data dictionary. See "Overview of Synonyms".
+PL/SQL subprograms and packages
+PL/SQL is the Oracle procedural extension of SQL. A PL/SQL subprogram is a named PL/SQL block that can be invoked with a set of parameters. A PL/SQL package groups logically related PL/SQL types, variables, and subprograms. See "PL/SQL Subprograms" and "PL/SQL Packages".

@@ -1,0 +1,605 @@
+
+==> NOTE: You are performing a sequence of gsutil operations that may
+run significantly faster if you instead use gsutil -m -o ... Please
+see the -m section under "gsutil help options" for further information
+about when gsutil -m can be advantageous.
+
+Updated ACL on gs://gcptest-demo-bucket/names/yob1883.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1884.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1885.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1886.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1887.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1888.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1889.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1890.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1891.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1892.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1893.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1894.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1895.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1896.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1897.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1898.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1899.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1900.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1901.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1902.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1903.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1904.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1905.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1906.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1907.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1908.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1909.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1910.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1911.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1912.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1913.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1914.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1915.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1916.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1917.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1918.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1919.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1920.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1921.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1922.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1923.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1924.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1925.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1926.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1927.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1928.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1929.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1930.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1931.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1932.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1933.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1934.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1935.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1936.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1937.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1938.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1939.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1940.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1941.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1942.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1943.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1944.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1945.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1946.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1947.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1948.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1949.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1950.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1951.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1952.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1953.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1954.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1955.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1956.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1957.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1958.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1959.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1960.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1961.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1962.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1963.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1964.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1965.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1966.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1967.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1968.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1969.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1970.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1971.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1972.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1973.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1974.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1975.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1976.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1977.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1978.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1979.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1980.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1981.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1982.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1983.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1984.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1985.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1986.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1987.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1988.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1989.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1990.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1991.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1992.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1993.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1994.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1995.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1996.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1997.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1998.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1999.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2000.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2001.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2002.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2003.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2004.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2005.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2006.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2007.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2009_test_file.txt
+
+==> NOTE: You are performing a sequence of gsutil operations that may
+run significantly faster if you instead use gsutil -m -o ... Please
+see the -m section under "gsutil help options" for further information
+about when gsutil -m can be advantageous.
+
+
+C:\Users\kristhim>gsutil
+Usage: gsutil [-D] [-DD] [-h header]... [-m] [-o] [-q] [command [opts...] args...]
+Available commands:
+  acl             Get, set, or change bucket and/or object ACLs
+  cat             Concatenate object content to stdout
+  compose         Concatenate a sequence of objects into a new composite object.
+  config          Obtain credentials and create configuration file
+  cors            Get or set a CORS JSON document for one or more buckets
+  cp              Copy files and objects
+  defacl          Get, set, or change default ACL on buckets
+  defstorageclass Get or set the default storage class on buckets
+  du              Display object size usage
+  hash            Calculate file hashes
+  help            Get help about commands and topics
+  iam             Get, set, or change bucket and/or object IAM permissions.
+  kms             Configure Cloud KMS encryption
+  label           Get, set, or change the label configuration of a bucket.
+  lifecycle       Get or set lifecycle configuration for a bucket
+  logging         Configure or retrieve logging on buckets
+  ls              List providers, buckets, or objects
+  mb              Make buckets
+  mv              Move/rename objects and/or subdirectories
+  notification    Configure object change notification
+  perfdiag        Run performance diagnostic
+  rb              Remove buckets
+  requesterpays   Enable or disable requester pays for one or more buckets
+  rewrite         Rewrite objects
+  rm              Remove objects
+  rsync           Synchronize content of two buckets/directories
+  setmeta         Set metadata on already uploaded objects
+  signurl         Create a signed url
+  stat            Display object status
+  test            Run gsutil unit/integration tests (for developers)
+  update          Update to the latest gsutil release
+  version         Print version info about gsutil
+  versioning      Enable or suspend versioning for one or more buckets
+  web             Set a main page and/or error page for one or more buckets
+
+Additional help topics:
+  acls            Working With Access Control Lists
+  anon            Accessing Public Data Without Credentials
+  apis            Cloud Storage APIs
+  crc32c          CRC32C and Installing crcmod
+  creds           Credential Types Supporting Various Use Cases
+  dev             Contributing Code to gsutil
+  encoding        Filename encoding and interoperability problems
+  encryption      Using Encryption Keys
+  metadata        Working With Object Metadata
+  naming          Object and Bucket Naming
+  options         Top-Level Command-Line Options
+  prod            Scripting Production Transfers
+  projects        Working With Projects
+  retries         Retry Handling Strategy
+  security        Security and Privacy Considerations
+  subdirs         How Subdirectories Work
+  support         Google Cloud Storage Support
+  throttling      Throttling gsutil
+  versions        Object Versioning and Concurrency Control
+  wildcards       Wildcard Names
+
+Use gsutil help <command or topic> for detailed help.
+
+C:\Users\kristhim>gsutil mb -c Coldline gs://gcptest-demo-bucket/
+Creating gs://gcptest-demo-bucket/...
+ServiceException: 409 Bucket gcptest-demo-bucket already exists.
+
+C:\Users\kristhim>gsutil -m cp -r C:\Users\kristhim\Desktop\thimma\practice\names gs://gcptest-demo-bucket
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform/gsutil\gsutil", line 19, in <module>
+    import gsutil
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\gsutil.py", line 101, in <module>
+    import crcmod
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\bundledpython\lib\site-packages\crcmod\__init__.py", line 2, in <module>
+    from crcmod.crcmod import *
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\bundledpython\lib\site-packages\crcmod\crcmod.py", line 50, in <module>
+    import sys, struct
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\bundledpython\lib\struct.py", line 1, in <module>
+    from _struct import *
+KeyboardInterrupt
+Terminate batch job (Y/N)? y
+
+C:\Users\kristhim>gsutil ls gs://gcptest-demo-bucket
+gs://gcptest-demo-bucket/names/
+
+C:\Users\kristhim>mv C:\Users\kristhim\Desktop\thimma\practice\names>yob2009.txt  C:\Users\kristhim\Desktop\thimma\practice\names>yob2009_testfile.txt
+
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kristhim>MOVE C:\Users\kristhim\Desktop\thimma\practice\names>yob2009.txt  C:\Users\kristhim\Desktop\thimma\practice\names>yob2009_testfile.t
+xt
+The process cannot access the file because it is being used by another process.
+
+C:\Users\kristhim>gsutil ls gs://gcptest-demo-bucket/names/*
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform/gsutil\gsutil", line 22, in <module>
+    gsutil.RunMain()
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\gsutil.py", line 114, in RunMain
+    import gslib.__main__
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\gslib\__main__.py", line 39, in <module>
+    import boto
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\third_party\boto\boto\__init__.py", line 27, in <module>
+    from boto.pyami.config import Config, BotoConfigLocations
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\third_party\boto\boto\pyami\config.py", line 29, in <module>
+    from boto.compat import expanduser, ConfigParser, NoOptionError, NoSectionError, StringIO
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\third_party\boto\boto\compat.py", line 55, in <module>
+    from boto.vendored.six.moves.urllib.parse import parse_qs, quote, unquote, \
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\third_party\boto\boto\vendored\six.py", line 92, in __get__
+    result = self._resolve()
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\third_party\boto\boto\vendored\six.py", line 160, in _resolve
+    module = _import_module(self.mod)
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\third_party\boto\boto\vendored\six.py", line 82, in _import_module
+    __import__(name)
+KeyboardInterrupt
+Terminate batch job (Y/N)? y
+
+C:\Users\kristhim>gsutil -m rsync -d -r C:\Users\kristhim\Desktop\thimma\practice\names gs://gcptest-bucket-demo/names
+BucketNotFoundException: 404 gs://gcptest-bucket-demo bucket does not exist.
+
+C:\Users\kristhim>gsutil -m rsync -d -r C:\Users\kristhim\Desktop\thimma\practice\names gs://gcptest-demo-bucket/names
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform/gsutil\gsutil", line 22, in <module>
+    gsutil.RunMain()
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\gsutil.py", line 114, in RunMain
+    import gslib.__main__
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\gslib\__main__.py", line 51, in <module>
+    from gslib import metrics
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\gslib\metrics.py", line 39, in <module>
+    from gslib.util import CalculateThroughput
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\gslib\util.py", line 40, in <module>
+    from apitools.base.py import http_wrapper
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\third_party\apitools\apitools\base\py\__init__.py", line 21, in <modu
+le>
+    from apitools.base.py.base_api import *
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\third_party\apitools\apitools\base\py\base_api.py", line 35, in <modu
+le>
+    from apitools.base.py import http_wrapper
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\third_party\apitools\apitools\base\py\http_wrapper.py", line 35, in <
+module>
+    from apitools.base.py import util
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\third_party\apitools\apitools\base\py\util.py", line 20, in <module>
+    import os
+KeyboardInterrupt
+Terminate batch job (Y/N)? Y
+
+C:\Users\kristhim>gsutil acl ch -r -u AllUsers:R gs://gcptest-demo-bucket/names
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform/gsutil\gsutil", line 22, in <module>
+    gsutil.RunMain()
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\gsutil.py", line 114, in RunMain
+    import gslib.__main__
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\gsutil\gslib\__main__.py", line 20, in <module>
+    import ConfigParser
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\bundledpython\lib\ConfigParser.py", line 91, in <module>
+    from collections import OrderedDict as _default_dict
+  File "C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\bundledpython\lib\collections.py", line 11, in <module>
+    '''
+KeyboardInterrupt
+Terminate batch job (Y/N)? Y
+
+C:\Users\kristhim>
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1927.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1928.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1929.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1930.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1931.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1932.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1933.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1934.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1935.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1936.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1937.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1938.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1939.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1940.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1941.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1942.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1943.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1944.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1945.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1946.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1947.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1948.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1949.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1950.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1951.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1952.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1953.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1954.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1955.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1956.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1957.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1958.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1959.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1960.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1961.txt
+INFO 0405 15:36:23.401000 util.py] Retrying request, attempt #1...
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1962.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1963.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1964.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1965.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1966.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1967.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1968.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1969.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1970.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1971.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1972.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1973.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1974.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1975.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1976.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1977.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1978.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1979.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1980.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1981.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1982.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1983.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1984.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1985.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1986.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1987.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1988.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1989.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1990.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1991.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1992.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1993.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1994.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1995.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1996.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1997.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1998.txt
+INFO 0405 15:36:54.255000 util.py] Retrying request, attempt #1...
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob1999.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob2000.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob2001.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob2002.txt
+INFO 0405 15:37:08.354000 util.py] Retrying request, attempt #1...
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob2003.txt
+INFO 0405 15:37:11.601000 util.py] Retrying request, attempt #1...
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob2004.txt
+INFO 0405 15:37:14.777000 util.py] Retrying request, attempt #1...
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob2005.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob2006.txt
+Copying mtime from src to dst for gs://gcptest-demo-bucket/names/yob2007.txt
+INFO 0405 15:37:17.938000 util.py] Retrying request, attempt #1...
+INFO 0405 15:37:23.199000 util.py] Retrying request, attempt #1...
+Removing gs://gcptest-demo-bucket/names/yob2008.txt0.0 B/s
+INFO 0405 15:37:25.999000 util.py] Retrying request, attempt #2...
+INFO 0405 15:37:26.592000 util.py] Retrying request, attempt #1...
+Removing gs://gcptest-demo-bucket/names/yob2009.txt
+INFO 0405 15:37:27.668000 util.py] Retrying request, attempt #1...
+INFO 0405 15:37:28.979000 util.py] Retrying request, attempt #2...
+Copying file://C:\Users\kristhim\Desktop\thimma\practice\names\yob2009_test_file.txt [Content-Type=text/plain]...
+INFO 0405 15:37:31.115000 util.py] Retrying request, attempt #2...
+INFO 0405 15:37:36.089000 util.py] Retrying request, attempt #1...
+INFO 0405 15:37:39.261000 util.py] Retrying request, attempt #1...
+INFO 0405 15:37:40.715000 util.py] Retrying request, attempt #2...
+INFO 0405 15:37:40.995000 util.py] Retrying request, attempt #1...
+INFO 0405 15:37:41.386000 util.py] Retrying request, attempt #3...
+INFO 0405 15:37:46.413000 util.py] Retrying request, attempt #1...
+INFO 0405 15:37:51.480000 util.py] Retrying request, attempt #1...
+INFO 0405 15:37:51.917000 util.py] Retrying request, attempt #2...
+INFO 0405 15:37:53.165000 util.py] Retrying request, attempt #1...
+INFO 0405 15:37:58.823000 util.py] Retrying request, attempt #1...
+INFO 0405 15:37:59.588000 util.py] Retrying request, attempt #2...
+INFO 0405 15:38:00.765000 util.py] Retrying request, attempt #1...
+INFO 0405 15:38:03.751000 util.py] Retrying request, attempt #2...
+INFO 0405 15:38:05.773000 util.py] Retrying request, attempt #2...
+INFO 0405 15:38:07.908000 util.py] Retrying request, attempt #3...
+INFO 0405 15:38:08.048000 util.py] Retrying request, attempt #1...
+INFO 0405 15:38:16.221000 util.py] Retrying request, attempt #2...
+INFO 0405 15:38:17.334000 util.py] Retrying request, attempt #1...
+INFO 0405 15:38:18.273000 util.py] Retrying request, attempt #3...
+INFO 0405 15:38:18.538000 util.py] Retrying request, attempt #3...
+INFO 0405 15:38:20.730000 util.py] Retrying request, attempt #2...
+INFO 0405 15:38:21.104000 util.py] Retrying request, attempt #1...
+INFO 0405 15:38:21.952000 util.py] Retrying request, attempt #3...
+INFO 0405 15:38:22.139000 util.py] Retrying request, attempt #2...
+INFO 0405 15:38:28.264000 util.py] Retrying request, attempt #4...
+INFO 0405 15:38:31.261000 util.py] Retrying request, attempt #2...
+INFO 0405 15:38:33.189000 util.py] Retrying request, attempt #3...
+INFO 0405 15:38:35.318000 util.py] Retrying request, attempt #2...
+INFO 0405 15:38:37.988000 util.py] Retrying request, attempt #3...
+INFO 0405 15:38:37.988000 util.py] Retrying request, attempt #3...
+INFO 0405 15:38:39.020000 util.py] Retrying request, attempt #4...
+INFO 0405 15:38:40.549000 util.py] Retrying request, attempt #4...
+INFO 0405 15:38:41.204000 util.py] Retrying request, attempt #1...
+INFO 0405 15:38:45.351000 util.py] Retrying request, attempt #3...
+INFO 0405 15:38:46.435000 util.py] Retrying request, attempt #2...
+INFO 0405 15:38:50.773000 util.py] Retrying request, attempt #3...
+INFO 0405 15:38:52.382000 util.py] Retrying request, attempt #4...
+INFO 0405 15:38:52.398000 util.py] Retrying request, attempt #5...
+INFO 0405 15:38:53.396000 util.py] Retrying request, attempt #1...
+INFO 0405 15:38:54.020000 util.py] Retrying request, attempt #1...
+INFO 0405 15:38:56.409000 util.py] Retrying request, attempt #4...
+INFO 0405 15:38:56.503000 util.py] Retrying request, attempt #2...
+INFO 0405 15:38:57.223000 util.py] Retrying request, attempt #4...
+INFO 0405 15:38:57.426000 util.py] Retrying request, attempt #4...
+INFO 0405 15:39:03.298000 util.py] Retrying request, attempt #5...
+INFO 0405 15:39:07.538000 util.py] Retrying request, attempt #5...
+INFO 0405 15:39:07.944000 util.py] Retrying request, attempt #2...
+INFO 0405 15:39:08.178000 util.py] Retrying request, attempt #2...
+INFO 0405 15:39:22.921000 util.py] Retrying request, attempt #3...
+INFO 0405 15:39:22.952000 util.py] Retrying request, attempt #5...
+INFO 0405 15:39:24.083000 util.py] Retrying request, attempt #3...
+INFO 0405 15:39:29.036000 util.py] Retrying request, attempt #5...
+INFO 0405 15:39:37.491000 util.py] Retrying request, attempt #4...
+/ [1/132 files][437.4 KiB/ 20.2 MiB]   2% Done  96.7 KiB/s ETA 00:03:29
+C:\Users\kristhim>gsutil acl ch -r -u AllUsers:R gs://gcptest-demo-bucket/names
+Updated ACL on gs://gcptest-demo-bucket/names/NationalReadMe.pdf
+INFO 0405 15:44:52.526000 util.py] Retrying request, attempt #1...
+INFO 0405 15:45:09.013000 util.py] Retrying request, attempt #2...
+INFO 0405 15:45:27.413000 util.py] Retrying request, attempt #3...
+INFO 0405 15:45:45.027000 util.py] Retrying request, attempt #4...
+No changes to gs://gcptest-demo-bucket/names/yob1880.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1880.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1881.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1882.txt
+
+==> NOTE: You are performing a sequence of gsutil operations that may
+run significantly faster if you instead use gsutil -m -o ... Please
+see the -m section under "gsutil help options" for further information
+about when gsutil -m can be advantageous.
+
+Updated ACL on gs://gcptest-demo-bucket/names/yob1883.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1884.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1885.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1886.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1887.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1888.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1889.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1890.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1891.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1892.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1893.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1894.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1895.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1896.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1897.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1898.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1899.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1900.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1901.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1902.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1903.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1904.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1905.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1906.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1907.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1908.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1909.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1910.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1911.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1912.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1913.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1914.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1915.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1916.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1917.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1918.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1919.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1920.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1921.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1922.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1923.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1924.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1925.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1926.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1927.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1928.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1929.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1930.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1931.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1932.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1933.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1934.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1935.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1936.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1937.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1938.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1939.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1940.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1941.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1942.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1943.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1944.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1945.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1946.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1947.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1948.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1949.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1950.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1951.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1952.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1953.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1954.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1955.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1956.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1957.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1958.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1959.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1960.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1961.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1962.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1963.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1964.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1965.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1966.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1967.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1968.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1969.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1970.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1971.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1972.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1973.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1974.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1975.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1976.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1977.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1978.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1979.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1980.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1981.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1982.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1983.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1984.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1985.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1986.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1987.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1988.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1989.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1990.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1991.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1992.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1993.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1994.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1995.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1996.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1997.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1998.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob1999.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2000.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2001.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2002.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2003.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2004.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2005.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2006.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2007.txt
+Updated ACL on gs://gcptest-demo-bucket/names/yob2009_test_file.txt
+
+==> NOTE: You are performing a sequence of gsutil operations that may
+run significantly faster if you instead use gsutil -m -o ... Please
+see the -m section under "gsutil help options" for further information
+about when gsutil -m can be advantageous.
+
+
+C:\Users\kristhim>gsutil acl ch -r -u AllUsers:R gs://gcptest-demo-bucket/names
+
+http://storage.googleapis.com/gcptest-demo-bucket/names/NationalReadMe.pdf
+C:\Users\kristhim>gsutil ls -Lr gs://gcptest-demo-bucket
+C:\Users\kristhim>gsutil -m rm gs://gcptest-demo-bucket/**
+C:\Users\kristhim>gsutil rb gs://gcptest-demo-bucket

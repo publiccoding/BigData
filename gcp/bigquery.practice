@@ -1,0 +1,543 @@
+                    |- id: integer
+                    |- ranking: integer
+
+
+C:\Users\kristhim>bq query "select id,title,url from bigquery-public-data.hacker_news.full group by title;
+BigQuery error in query operation: Not found: Project gcptest
+
+C:\Users\kristhim>bq query "select id,title,url from bigquery-public-data.hacker_news.full group by title;
+BigQuery error in query operation: Not found: Project gcptest
+
+C:\Users\kristhim>bq ls
+BigQuery error in ls operation: Not found: Project gcptest
+
+C:\Users\kristhim>bq query "select id,title,url from bigquery-public-data.hacker_news.full group by title";
+BigQuery error in query operation: Not found: Project gcptest
+
+C:\Users\kristhim>bq ls
+BigQuery error in ls operation: Not found: Project gcptest
+
+C:\Users\kristhim>BigQuery error in query operation: Not found: Project gcptest
+'BigQuery' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kristhim>gcloud init
+Welcome! This command will take you through the configuration of gcloud.
+
+Settings from your current configuration [gcp-ai] are:
+core:
+  account: thimma.inbox@gmail.com
+  disable_usage_reporting: 'False'
+  project: gcptest
+
+Pick configuration to use:
+ [1] Re-initialize this configuration [gcp-ai] with new settings
+ [2] Create a new configuration
+ [3] Switch to and re-initialize existing configuration: [default]
+Please enter your numeric choice:  1
+
+Your current configuration has been set to: [gcp-ai]
+
+You can skip diagnostics next time by using the following flag:
+  gcloud init --skip-diagnostics
+
+Network diagnostic detects and fixes local network connection issues.
+Checking network connection...done.
+Reachability Check passed.
+Network diagnostic (1/1 checks) passed.
+
+Choose the account you would like to use to perform operations for
+this configuration:
+ [1] thimma.inbox@gmail.com
+ [2] thimmarayan.krishnappa@gmail.com
+ [3] Log in with a new account
+Please enter your numeric choice:  1
+
+You are logged in as: [thimma.inbox@gmail.com].
+
+Pick cloud project to use:
+ [1] deft-province-200115
+ [2] gcptest-2
+ [3] Create a new project
+Please enter numeric choice or text value (must exactly match list
+item):  2
+
+Your current project has been set to: [gcptest-2].
+
+Not setting default zone/region (this feature makes it easier to use
+[gcloud compute] by setting an appropriate default value for the
+--zone and --region flag).
+See https://cloud.google.com/compute/docs/gcloud-compute section on how to set
+default compute region and zone manually. If you would like [gcloud init] to be
+able to do this for you the next time you run it, make sure the
+Compute Engine API is enabled for your project on the
+https://console.developers.google.com/apis page.
+
+Your Google Cloud SDK is configured and ready to use!
+
+* Commands that require authentication will use thimma.inbox@gmail.com by default
+* Commands will reference project `gcptest-2` by default
+Run `gcloud help config` to learn how to change individual settings
+
+This gcloud configuration is called [gcp-ai]. You can create additional configurations if you work with multiple accounts and/or projects.
+Run `gcloud topic configurations` to learn more.
+
+Some things to try next:
+
+* Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+* Run `gcloud topic -h` to learn about advanced features of the SDK like arg files and output formatting
+
+C:\Users\kristhim>bq l
+FATAL Command 'l' unknown
+Run 'bq help' to get help
+
+C:\Users\kristhim>bq ls
+
+C:\Users\kristhim>gcloud init
+Welcome! This command will take you through the configuration of gcloud.
+
+Settings from your current configuration [gcp-ai] are:
+core:
+  account: thimma.inbox@gmail.com
+  disable_usage_reporting: 'False'
+  project: gcptest-2
+
+Pick configuration to use:
+ [1] Re-initialize this configuration [gcp-ai] with new settings
+ [2] Create a new configuration
+ [3] Switch to and re-initialize existing configuration: [default]
+Please enter your numeric choice:  2
+
+Enter configuration name. Names start with a lower case letter and
+contain only lower case letters a-z, digits 0-9, and hyphens '-':  gcptest
+Your current configuration has been set to: [gcptest]
+
+You can skip diagnostics next time by using the following flag:
+  gcloud init --skip-diagnostics
+
+Network diagnostic detects and fixes local network connection issues.
+Checking network connection...done.
+Reachability Check passed.
+Network diagnostic (1/1 checks) passed.
+
+Choose the account you would like to use to perform operations for
+this configuration:
+ [1] thimma.inbox@gmail.com
+ [2] thimmarayan.krishnappa@gmail.com
+ [3] Log in with a new account
+Please enter your numeric choice:  1
+
+You are logged in as: [thimma.inbox@gmail.com].
+
+Pick cloud project to use:
+ [1] deft-province-200115
+ [2] gcptest-2
+ [3] Create a new project
+Please enter numeric choice or text value (must exactly match list
+item):  2
+
+Your current project has been set to: [gcptest-2].
+
+Not setting default zone/region (this feature makes it easier to use
+[gcloud compute] by setting an appropriate default value for the
+--zone and --region flag).
+See https://cloud.google.com/compute/docs/gcloud-compute section on how to set
+default compute region and zone manually. If you would like [gcloud init] to be
+able to do this for you the next time you run it, make sure the
+Compute Engine API is enabled for your project on the
+https://console.developers.google.com/apis page.
+
+Your Google Cloud SDK is configured and ready to use!
+
+* Commands that require authentication will use thimma.inbox@gmail.com by default
+* Commands will reference project `gcptest-2` by default
+Run `gcloud help config` to learn how to change individual settings
+
+This gcloud configuration is called [gcptest]. You can create additional configurations if you work with multiple accounts and/or projects.
+Run `gcloud topic configurations` to learn more.
+
+Some things to try next:
+
+* Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+* Run `gcloud topic -h` to learn about advanced features of the SDK like arg files and output formatting
+
+C:\Users\kristhim>gcloud config set compute/zone us-east1-b
+Updated property [compute/zone].
+
+C:\Users\kristhim>gcloud config set compute/region us-east1
+Updated property [compute/region].
+
+C:\Users\kristhim>bq ls
+
+C:\Users\kristhim>bq ls publicdata:
+  datasetId
+ -----------
+  samples
+
+C:\Users\kristhim>bq mk babynames
+Dataset 'gcptest-2:babynames' successfully created.
+
+C:\Users\kristhim>bq ls
+  datasetId
+ -----------
+  babynames
+
+C:\Users\kristhim>bq load babynames.names2016 C:\Users\kristhim\Desktop\thimma\practice\names\yob2016.txt name:string, gender:string, count:integer
+Too many positional args, still have ['gender:string,', 'count:integer']
+
+C:\Users\kristhim>bq load babynames.names2010 C:\Users\kristhim\Desktop\thimma\practice\names\yob2010.txt name:string, gender:string, count:integer
+Too many positional args, still have ['gender:string,', 'count:integer']
+
+C:\Users\kristhim>bq load babynames.names2010 C:\\Users\\kristhim\\Desktop\\thimma\\practice\\names\\yob2010.txt name:string, gender:string, count:int
+eger
+Too many positional args, still have ['gender:string,', 'count:integer']
+
+C:\Users\kristhim>bq ls
+  datasetId
+ -----------
+  babynames
+
+C:\Users\kristhim>bq ls babynames:
+BigQuery error in ls operation: Not found: Project babynames
+
+C:\Users\kristhim>bq ls gcptest-1:
+
+C:\Users\kristhim>bq load babynames.names2016 yob2016.txt name:string, gender:string, count:integer
+Too many positional args, still have ['gender:string,', 'count:integer']
+
+C:\Users\kristhim>bq load babynames.names2016 yob2016.txt [name:string, gender:string, count:integer]
+Too many positional args, still have ['gender:string,', 'count:integer]']
+
+C:\Users\kristhim>bq load --autodetect babynames.names2016 yob2016.txt
+Upload complete.
+Waiting on bqjob_r53f2284e_0000016294087986_1 ... (0s) Current status: DONE
+BigQuery error in load operation: Error processing job
+'gcptest-2:bqjob_r53f2284e_0000016294087986_1': Error while reading data, error
+message: CSV table encountered too many errors, giving up. Rows: 18758; errors:
+1. Please look into the error stream for more details.
+Failure details:
+- mediaupload-snapshot: Error while reading data, error message:
+Could not parse 'M' as bool for field bool_field_1 (position 1) 
+starting at location 243650
+
+C:\Users\kristhim>bq ls
+  datasetId
+ -----------
+  babynames
+
+C:\Users\kristhim>bq ls babynames.names2016
+Invalid identifier "babynames.names2016" for ls, cannot call list on object of
+type TableReference
+
+C:\Users\kristhim>bq load --autodetect --source_format=csv babynames.names2016 yob2016.txt
+FATAL Flags parsing error: flag --source_format=csv: value should be one of <CSV|NEWLINE_DELIMITED_JSON|DATASTORE_BACKUP|AVRO|PARQUET|ORC>
+Run 'bq help' to get help
+
+C:\Users\kristhim>bq load --autodetect --source_format=CSV babynames.names2016 yob2016.txt
+Upload complete.
+Waiting on bqjob_r250d320f_00000162940ba20d_1 ... (0s) Current status: DONE
+BigQuery error in load operation: Error processing job
+'gcptest-2:bqjob_r250d320f_00000162940ba20d_1': Error while reading data, error
+message: CSV table encountered too many errors, giving up. Rows: 18758; errors:
+1. Please look into the error stream for more details.
+Failure details:
+- mediaupload-snapshot: Error while reading data, error message:
+Could not parse 'M' as bool for field bool_field_1 (position 1)
+starting at location 243650
+
+C:\Users\kristhim>bq load --source_format=csv babynames.names2016 yob2016.txt  name:string,gender:string,count:integer
+FATAL Flags parsing error: flag --source_format=csv: value should be one of <CSV|NEWLINE_DELIMITED_JSON|DATASTORE_BACKUP|AVRO|PARQUET|ORC>
+Run 'bq help' to get help
+
+C:\Users\kristhim>bq load --source_format=CSV babynames.names2016 yob2016.txt  name:string,gender:string,count:integer
+Upload complete.
+Waiting on bqjob_r547bdf8d_00000162940d7ad6_1 ... (0s) Current status: DONE
+
+C:\Users\kristhim>bq ls
+  datasetId
+ -----------
+  babynames
+
+C:\Users\kristhim>bq ls babynames
+   tableId    Type    Labels   Time Partitioning
+ ----------- ------- -------- -------------------
+  names2016   TABLE
+
+C:\Users\kristhim>bq ls babynames.names2016
+Invalid identifier "babynames.names2016" for ls, cannot call list on object of
+type TableReference
+
+C:\Users\kristhim>bq show babynames.names2016
+Table gcptest-2:babynames.names2016
+
+   Last modified         Schema         Total Rows   Total Bytes   Expiration   Time Partitioning   Labels
+ ----------------- ------------------- ------------ ------------- ------------ ------------------- --------
+  05 Apr 09:55:52   |- name: string     32868        629519
+                    |- gender: string
+                    |- count: integer
+
+
+C:\Users\kristhim>bq query "select name,gender from babynames.names2016 where gender='F' group by count ASC LIMIT 5"
+Error in query string: Error processing job
+'gcptest-2:bqjob_r22d45c90_00000162941ae21e_1': Encountered " "ASC" "ASC "" at
+line 1, column 77.
+Was expecting:
+<EOF>
+
+
+C:\Users\kristhim>bq query "select name,gender from babynames.names2016 where gender='F' order by count ASC LIMIT 5"
+Waiting on bqjob_r5a241d6f_00000162941b6667_1 ... (0s) Current status: DONE
++-----------+--------+
+|   name    | gender |
++-----------+--------+
+| Alexxia   | F      |
+| Acie      | F      |
+| Aaravi    | F      |
+| Amarielle | F      |
+| Addelaide | F      |
++-----------+--------+
+
+C:\Users\kristhim>
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\kristhim>bq mk babynames2
+Dataset 'gcptest-2:babynames2' successfully created.
+
+C:\Users\kristhim>bq load babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+BigQuery error in load operation: Error processing job
+'gcptest-2:bqjob_r5a384409_00000162957417f5_1': No schema specified on job or
+table.
+
+C:\Users\kristhim>bq load --autodetect  babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+Waiting on bqjob_r1765a816_000001629574e6c9_1 ... (0s) Current status: DONE
+BigQuery error in load operation: Error processing job
+'gcptest-2:bqjob_r1765a816_000001629574e6c9_1': Error while reading data, error
+message: CSV table encountered too many errors, giving up. Rows: 17654; errors:
+1. Please look into the error stream for more details.
+Failure details:
+- gs://gcptest-demo-bucket/names/yob2000.txt: Error while reading
+data, error message: Could not parse 'M' as bool for field
+bool_field_1 (position 1) starting at location 229708
+
+C:\Users\kristhim>bq load --autodetect --source_format=CSV babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+Waiting on bqjob_r2af140cd_000001629575522e_1 ... (0s) Current status: DONE
+BigQuery error in load operation: Error processing job
+'gcptest-2:bqjob_r2af140cd_000001629575522e_1': Error while reading data, error
+message: CSV table encountered too many errors, giving up. Rows: 17654; errors:
+1. Please look into the error stream for more details.
+Failure details:
+- gs://gcptest-demo-bucket/names/yob2000.txt: Error while reading
+data, error message: Could not parse 'M' as bool for field
+bool_field_1 (position 1) starting at location 229708
+
+C:\Users\kristhim>bq load babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt name:string,gender:string,count:integer
+Waiting on bqjob_r4f58cc2b_000001629575f4d0_1 ... (0s) Current status: DONE
+
+C:\Users\kristhim>bq show babynames2.names2000
+Table gcptest-2:babynames2.names2000
+
+   Last modified         Schema         Total Rows   Total Bytes   Expiration   Time Partitioning   Labels
+ ----------------- ------------------- ------------ ------------- ------------ ------------------- --------
+  05 Apr 16:29:23   |- name: string     29764        572919
+                    |- gender: string
+                    |- count: integer
+
+bq mk babynames2
+bq load babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+bq load --autodetect  babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+bq load --autodetect --source_format=CSV babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt
+bq load babynames2.names2000 gs://gcptest-demo-bucket/names/yob2000.txt name:string,gender:string,count:integer
+bq show babynames2.names2000
+bq mk babynames3
+bq load babynames3.names2001 gs://gcptest-demo-bucket/names/yob2001.txt name:string,gender:string,count:integer
+bq cp babynames.names2016 babynames.names2016COPY
+bq update --description "Description for the baby Names on 2016" babynames.names2016
+bq cp -a babynames.names2016 testproject:babynames1.name2010
+Y
+bq cp -a babynames.names2016, babynames2.names2000 gcptest:babynames3.names2001
+bq cp -a babynames.names2016, babynames2.names2000 gcptest:babynames3.names2001 name:string,gender:string,count:integer
+bq cp -a babynames.names2016, babynames2.names2000 babynames3.names2001
+bq cp -f babynames.names2016, babynames2.names2000 babynames3.names2001
+bq show babynames3.names2001
+bq cp -f babynames.names2016, babynames2.names2000 babynames3.names2001
+bq ls babynames3
+bq cp -f babynames.names2016 babynames3.names2001
+bq ls babynames3
+bq cp -f babynames.names2016, babynames2.names2000 babynames3.names20016
+bq cp -f babynames.names2016, babynames2.names2000 babynames3.names2016
+bq cp -f babynames.names2016 babynames3.names2016
+bq ls babynames3
+bq cp -a babynames.names2016, babynames2.names2000 babynames3.names2001
+bq rm -t gcptest:babynames3.names2016
+bq ls
+bq rm -t gcptest:babynames3.names2016
+bq rm -t gcptest-2:babynames3.names2016
+bq ls gcptest:babynames3
+bq ls babynames3
+time
+getsystemtime
+systemtime
+date
+GetSystemTime
+echo %time%
+(Get-Date -UFormat "%Y-%m-%d %H:%M:%S").toString() + "." + ((Get-Date).millisecond)
+echo %(Get-Date -UFormat "%Y-%m-%d %H:%M:%S").toString() + "." + ((Get-Date).millisecond)%
+uptime
+date
+date help
+help
+bq head --max_rows=10 babynames3.names2001
+C:\Users\kristhim>
+
+C:\Users\kristhim>systemtime
+'systemtime' is not recognized as an internal or external command,
+operable program or batch file.
+
+
+C:\Users\kristhim>date
+The current date is: Thu 04/05/2018
+Enter the new date: (mm-dd-yy)
+C:\Users\kristhim>GetSystemTime
+'GetSystemTime' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kristhim>echo %time%
+17:45:29.26
+
+C:\Users\kristhim>(Get-Date -UFormat "%Y-%m-%d %H:%M:%S").toString() + "." + ((Get-Date).millisecond)
+.toString() was unexpected at this time.
+
+C:\Users\kristhim>echo %(Get-Date -UFormat "%Y-%m-%d %H:%M:%S").toString() + "." + ((Get-Date).millisecond)%
+%(Get-Date -UFormat "%Y-%m-%d %H:%M:%S").toString() + "." + ((Get-Date).millisecond)%
+
+C:\Users\kristhim>uptime
+'uptime' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kristhim>date
+The current date is: Thu 04/05/2018
+Enter the new date: (mm-dd-yy)
+C:\Users\kristhim>date help
+The system cannot accept the date entered.
+Enter the new date: (mm-dd-yy)
+C:\Users\kristhim>help
+For more information on a specific command, type HELP command-name
+ASSOC          Displays or modifies file extension associations.
+ATTRIB         Displays or changes file attributes.
+BREAK          Sets or clears extended CTRL+C checking.
+BCDEDIT        Sets properties in boot database to control boot loading.
+CACLS          Displays or modifies access control lists (ACLs) of files.
+CALL           Calls one batch program from another.
+CD             Displays the name of or changes the current directory.
+CHCP           Displays or sets the active code page number.
+CHDIR          Displays the name of or changes the current directory.
+CHKDSK         Checks a disk and displays a status report.
+CHKNTFS        Displays or modifies the checking of disk at boot time.
+CLS            Clears the screen.
+CMD            Starts a new instance of the Windows command interpreter.
+COLOR          Sets the default console foreground and background colors.
+COMP           Compares the contents of two files or sets of files.
+COMPACT        Displays or alters the compression of files on NTFS partitions.
+CONVERT        Converts FAT volumes to NTFS.  You cannot convert the
+               current drive.
+COPY           Copies one or more files to another location.
+DATE           Displays or sets the date.
+DEL            Deletes one or more files.
+DIR            Displays a list of files and subdirectories in a directory.
+DISKCOMP       Compares the contents of two floppy disks.
+DISKCOPY       Copies the contents of one floppy disk to another.
+DISKPART       Displays or configures Disk Partition properties.
+DOSKEY         Edits command lines, recalls Windows commands, and
+               creates macros.
+DRIVERQUERY    Displays current device driver status and properties.
+ECHO           Displays messages, or turns command echoing on or off.
+ENDLOCAL       Ends localization of environment changes in a batch file.
+ERASE          Deletes one or more files.
+EXIT           Quits the CMD.EXE program (command interpreter).
+FC             Compares two files or sets of files, and displays the
+               differences between them.
+FIND           Searches for a text string in a file or files.
+FINDSTR        Searches for strings in files.
+FOR            Runs a specified command for each file in a set of files.
+FORMAT         Formats a disk for use with Windows.
+FSUTIL         Displays or configures the file system properties.
+FTYPE          Displays or modifies file types used in file extension
+               associations.
+GOTO           Directs the Windows command interpreter to a labeled line in
+               a batch program.
+GPRESULT       Displays Group Policy information for machine or user.
+GRAFTABL       Enables Windows to display an extended character set in
+               graphics mode.
+HELP           Provides Help information for Windows commands.
+ICACLS         Display, modify, backup, or restore ACLs for files and
+               directories.
+IF             Performs conditional processing in batch programs.
+LABEL          Creates, changes, or deletes the volume label of a disk.
+MD             Creates a directory.
+MKDIR          Creates a directory.
+MKLINK         Creates Symbolic Links and Hard Links
+MODE           Configures a system device.
+MORE           Displays output one screen at a time.
+MOVE           Moves one or more files from one directory to another
+               directory.
+OPENFILES      Displays files opened by remote users for a file share.
+PATH           Displays or sets a search path for executable files.
+PAUSE          Suspends processing of a batch file and displays a message.
+POPD           Restores the previous value of the current directory saved by
+               PUSHD.
+PRINT          Prints a text file.
+PROMPT         Changes the Windows command prompt.
+PUSHD          Saves the current directory then changes it.
+RD             Removes a directory.
+RECOVER        Recovers readable information from a bad or defective disk.
+REM            Records comments (remarks) in batch files or CONFIG.SYS.
+REN            Renames a file or files.
+RENAME         Renames a file or files.
+REPLACE        Replaces files.
+RMDIR          Removes a directory.
+ROBOCOPY       Advanced utility to copy files and directory trees
+SET            Displays, sets, or removes Windows environment variables.
+SETLOCAL       Begins localization of environment changes in a batch file.
+SC             Displays or configures services (background processes).
+SCHTASKS       Schedules commands and programs to run on a computer.
+SHIFT          Shifts the position of replaceable parameters in batch files.
+SHUTDOWN       Allows proper local or remote shutdown of machine.
+SORT           Sorts input.
+START          Starts a separate window to run a specified program or command.
+SUBST          Associates a path with a drive letter.
+SYSTEMINFO     Displays machine specific properties and configuration.
+TASKLIST       Displays all currently running tasks including services.
+TASKKILL       Kill or stop a running process or application.
+TIME           Displays or sets the system time.
+TITLE          Sets the window title for a CMD.EXE session.
+TREE           Graphically displays the directory structure of a drive or
+               path.
+TYPE           Displays the contents of a text file.
+VER            Displays the Windows version.
+VERIFY         Tells Windows whether to verify that your files are written
+               correctly to a disk.
+VOL            Displays a disk volume label and serial number.
+XCOPY          Copies files and directory trees.
+WMIC           Displays WMI information inside interactive command shell.
+
+For more information on tools see the command-line reference in the online help.
+
+C:\Users\kristhim>bq head --max_rows=10 babynames3.names2001
++----------+--------+-------+
+|   name   | gender | count |
++----------+--------+-------+
+| Etta     | F      |   256 |
+| Cindy    | F      |   256 |
+| Addalyn  | F      |   256 |
+| Opal     | F      |   256 |
+| Jurnee   | F      |   256 |
+| Alisa    | F      |   256 |
+| Arleth   | F      |   256 |
+| Marlowe  | F      |   256 |
+| America  | F      |   256 |
+| Catalina | F      |  1024 |
++----------+--------+-------+
+
+C:\Users\kristhim>
+
