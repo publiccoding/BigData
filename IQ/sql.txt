@@ -57,3 +57,5 @@ Synonyms
 A synonym is an alias for another schema object. Because a synonym is simply an alias, it requires no storage other than its definition in the data dictionary. See "Overview of Synonyms".
 PL/SQL subprograms and packages
 PL/SQL is the Oracle procedural extension of SQL. A PL/SQL subprogram is a named PL/SQL block that can be invoked with a set of parameters. A PL/SQL package groups logically related PL/SQL types, variables, and subprograms. See "PL/SQL Subprograms" and "PL/SQL Packages".
+
+C:\Users\kristhim\GitRepo\DataAnalytic\IQ\sql.txt
