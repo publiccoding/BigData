@@ -7,8 +7,6 @@ import subprocess
 from tempfile import gettempdir 
 
 
-
-
 session  = Session(profile_name="adminuser")
 polly = session.client("polly")
 
@@ -18,7 +16,6 @@ def text_to_speech(text):
     except(BotoCoreError, ClientError) as error:
         print(error)
         sys.exit(-1)
-
 
     if "AudioStream" in response:
         
@@ -38,7 +35,6 @@ def text_to_speech(text):
     else:
         opener = "open" if sys.platform == "darwin" else "xdg-open"
         subprocess.call([opener,output])
-
 
 with open('entities.data','r') as file:
       for text in file:
